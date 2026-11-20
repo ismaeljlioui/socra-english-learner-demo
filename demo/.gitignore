@@ -34,3 +34,4 @@ evaluations/*
 .vercel/
 .runtime-check/
 server/hosted-key.json
+!evaluations/vercel-live-smoke-2026-11-20.json

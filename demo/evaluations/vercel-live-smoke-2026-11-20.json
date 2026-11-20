@@ -1,0 +1,344 @@
+{
+  "schemaVersion": "0.1",
+  "exportedAt": "2026-11-20T19:41:54.418Z",
+  "evidenceStatus": "Provisional model suggestions; human review required",
+  "session": {
+    "id": "eb2ecc0d-933d-4688-bdb5-9664a5b147ab",
+    "taskId": "glaucon-justice-v1",
+    "taskVersion": "0.1",
+    "rubricVersion": "0.1",
+    "policyVersion": "0.1",
+    "condition": "policy",
+    "mode": "live",
+    "modelId": "gemini-3.1-flash-lite",
+    "generationSettings": {
+      "provider": "Google Gemini",
+      "api": "generateContent v1beta",
+      "prompt_revision": "2026-11-05-contiguous-quotes",
+      "max_output_tokens": 5000,
+      "candidate_count": 1,
+      "response_mime_type": "application/json",
+      "structured_output": "responseJsonSchema; controller validation required",
+      "timeout_ms": 45000,
+      "temperature": "provider default (not explicitly set)",
+      "thinking": "provider default (not explicitly set)",
+      "automatic_retries": false,
+      "model_fallback": false,
+      "free_tier_verification": {
+        "verified": true,
+        "model": "gemini-3.1-flash-lite",
+        "observed_at": "2026-11-05T15:53:18.188Z",
+        "project": "Default Gemini Project",
+        "source": "saved_operator_confirmation",
+        "scope": "Saved operator confirmation of project Free tier and exact model eligibility; not a fresh billing check or API free-only switch. Reconfirm after changing the project, key, model, or billing tier.",
+        "quota_availability": "Not established by this verification; a request can still fail because of quota or rate limits."
+      }
+    },
+    "phase": "final_response",
+    "createdAt": "2026-11-20T19:41:03.473Z",
+    "updatedAt": "2026-11-20T19:41:13.760Z",
+    "turns": [
+      {
+        "id": "c755d343-5dfe-4ddc-a0be-ad5939a43f41",
+        "role": "student",
+        "text": "Justice would still matter because harming someone is wrong even when nobody sees it. In the passage, people make laws to avoid suffering injustice, so their reason is practical protection rather than valuing justice for itself.",
+        "timestamp": "2026-11-20T19:41:11.112Z",
+        "phase": "eliciting",
+        "precedingSupportEventIds": [],
+        "tags": [
+          "initial_response"
+        ],
+        "substantive": true
+      },
+      {
+        "id": "0abf6683-d684-41e5-9def-b2970668c88a",
+        "role": "assistant",
+        "text": "You can give a final response in your own words, or finish with what you have already shared.",
+        "timestamp": "2026-11-20T19:41:13.760Z",
+        "phase": "eliciting",
+        "actionId": "offer_finish",
+        "precedingSupportEventIds": [],
+        "tags": []
+      }
+    ],
+    "supportEvents": [
+      {
+        "id": "2700d609-fbf9-463e-89f0-acedb8800aee",
+        "requestTurnId": null,
+        "triggerTurnId": "c755d343-5dfe-4ddc-a0be-ad5939a43f41",
+        "actionId": "offer_finish",
+        "plannedCategory": "administrative",
+        "deliveredTurnId": "0abf6683-d684-41e5-9def-b2970668c88a",
+        "requested": false,
+        "delivered": true,
+        "status": "delivered",
+        "reviewerCategory": "unreviewed",
+        "reviewNote": ""
+      }
+    ],
+    "observations": [
+      {
+        "criterionId": "C1",
+        "state": "evidence_present",
+        "studentTurnId": "c755d343-5dfe-4ddc-a0be-ad5939a43f41",
+        "quote": "people make laws to avoid suffering injustice, so their reason is practical protection rather than valuing justice for itself",
+        "explanation": "The student correctly identifies that the passage views justice as a compromise motivated by self-interest and the desire to avoid harm.",
+        "unresolvedIssue": ""
+      },
+      {
+        "criterionId": "C2",
+        "state": "evidence_present",
+        "studentTurnId": "c755d343-5dfe-4ddc-a0be-ad5939a43f41",
+        "quote": "Justice would still matter because harming someone is wrong even when nobody sees it",
+        "explanation": "The student states a position that justice has intrinsic value, supported by the assertion that harming others is wrong regardless of observability.",
+        "unresolvedIssue": ""
+      },
+      {
+        "criterionId": "C3",
+        "state": "evidence_present",
+        "studentTurnId": "c755d343-5dfe-4ddc-a0be-ad5939a43f41",
+        "quote": "In the passage, people make laws to avoid suffering injustice, so their reason is practical protection rather than valuing justice for itself.",
+        "explanation": "The student relates their position to the passage by contrasting their belief in the intrinsic value of justice with the passage's presentation of justice as a practical, social covenant.",
+        "unresolvedIssue": ""
+      }
+    ],
+    "probes": [],
+    "consecutiveRepairs": 0,
+    "review": null,
+    "revisions": [],
+    "attempts": [
+      {
+        "id": "97e4144d-ece1-42ef-b37c-c6afc967e1ae",
+        "purpose": "next",
+        "timestamp": "2026-11-20T19:41:13.760Z",
+        "latencyMs": 2647,
+        "model": "gemini-3.1-flash-lite",
+        "usage": {
+          "promptTokenCount": 2271,
+          "candidatesTokenCount": 439,
+          "totalTokenCount": 2710,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 2271
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "cost": null,
+        "rawOutput": {
+          "candidates": [
+            {
+              "content": {
+                "parts": [
+                  {
+                    "text": "{\n  \"actionId\": \"offer_finish\",\n  \"termId\": null,\n  \"observations\": [\n    {\n      \"criterionId\": \"C1\",\n      \"state\": \"evidence_present\",\n      \"studentTurnId\": \"c755d343-5dfe-4ddc-a0be-ad5939a43f41\",\n      \"quote\": \"people make laws to avoid suffering injustice, so their reason is practical protection rather than valuing justice for itself\",\n      \"explanation\": \"The student correctly identifies that the passage views justice as a compromise motivated by self-interest and the desire to avoid harm.\",\n      \"unresolvedIssue\": \"\"\n    },\n    {\n      \"criterionId\": \"C2\",\n      \"state\": \"evidence_present\",\n      \"studentTurnId\": \"c755d343-5dfe-4ddc-a0be-ad5939a43f41\",\n      \"quote\": \"Justice would still matter because harming someone is wrong even when nobody sees it\",\n      \"explanation\": \"The student states a position that justice has intrinsic value, supported by the assertion that harming others is wrong regardless of observability.\",\n      \"unresolvedIssue\": \"\"\n    },\n    {\n      \"criterionId\": \"C3\",\n      \"state\": \"evidence_present\",\n      \"studentTurnId\": \"c755d343-5dfe-4ddc-a0be-ad5939a43f41\",\n      \"quote\": \"In the passage, people make laws to avoid suffering injustice, so their reason is practical protection rather than valuing justice for itself.\",\n      \"explanation\": \"The student relates their position to the passage by contrasting their belief in the intrinsic value of justice with the passage's presentation of justice as a practical, social covenant.\",\n      \"unresolvedIssue\": \"\"\n    }\n  ],\n  \"unresolvedQuestions\": []\n}",
+                    "thoughtSignature": "EqEBCp4BAWkUfRPJKZLOJkfwm5MMQw2OTDLVww/3MF+26Qj4vDOACqS491re+RwKKe4eAodE9tQqwL8wontwrKCMp+ep7h6Sd5lsg407NQ/HqdpLxD8n6b8zpU2riRhstHnJKXJHecS7/sGAOZipusAGbkn+rJxW94bn3hg5WUVG27ls5tqJda6DXHxrUjWMU6Lx7B41FfPaknZpaDRsWFwI9BQ="
+                  }
+                ],
+                "role": "model"
+              },
+              "finishReason": "STOP",
+              "index": 0
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 2271,
+            "candidatesTokenCount": 439,
+            "totalTokenCount": 2710,
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 2271
+              }
+            ],
+            "serviceTier": "standard"
+          },
+          "modelVersion": "gemini-3.1-flash-lite",
+          "responseId": "V6IAa6fjEpqyytMPmIuMmAM"
+        },
+        "error": null
+      }
+    ],
+    "fixtureIndex": 0,
+    "finalSkipped": false,
+    "error": null,
+    "pending": null,
+    "processedRequests": {
+      "7bbcbba0-161c-4c8f-a6bc-06c6b8f27740": "next"
+    },
+    "reflectionIds": [],
+    "responseFeedback": []
+  },
+  "effectiveSupportContext": [
+    {
+      "turnId": "c755d343-5dfe-4ddc-a0be-ad5939a43f41",
+      "supportEventIds": [],
+      "tags": [
+        "initial_response"
+      ]
+    }
+  ],
+  "limitations": [
+    "Not a validated assessment or English-proficiency test.",
+    "Category labels do not establish absence of leakage.",
+    "Text behavior cannot establish speech reliability.",
+    "Human corrections are separate from the frozen original review."
+  ],
+  "language": {
+    "currentContext": {
+      "state": "Illinois",
+      "framework": "WIDA",
+      "writing": null,
+      "reading": null
+    },
+    "analyses": [
+      {
+        "id": "4f7213a1-16d1-4159-8e1d-9f7d76974f8b",
+        "sessionId": "eb2ecc0d-933d-4688-bdb5-9664a5b147ab",
+        "requestId": "9d518298-5531-40a8-9e03-8069aa95c9a4",
+        "target": {
+          "kind": "conversation"
+        },
+        "snapshot": {
+          "assignment": {
+            "id": "glaucon-justice-v1",
+            "version": "0.1",
+            "context": "Glaucon presents an account of justice for Socrates to examine. Distinguish that account from your own position. You do not need knowledge of the rest of the book.",
+            "question": "Would justice still matter morally if it brought no practical advantages, such as safety or a good reputation? Explain your position and relate it to the account in the passage.",
+            "passages": [
+              {
+                "id": "P1",
+                "text": "They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good."
+              },
+              {
+                "id": "P2",
+                "text": "And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just."
+              }
+            ]
+          },
+          "turns": [
+            {
+              "id": "c755d343-5dfe-4ddc-a0be-ad5939a43f41",
+              "role": "student",
+              "text": "Justice would still matter because harming someone is wrong even when nobody sees it. In the passage, people make laws to avoid suffering injustice, so their reason is practical protection rather than valuing justice for itself.",
+              "phase": "eliciting",
+              "timestamp": "2026-11-20T19:41:11.112Z"
+            },
+            {
+              "id": "0abf6683-d684-41e5-9def-b2970668c88a",
+              "role": "assistant",
+              "text": "You can give a final response in your own words, or finish with what you have already shared.",
+              "phase": "eliciting",
+              "timestamp": "2026-11-20T19:41:13.760Z"
+            }
+          ],
+          "assistance": [
+            {
+              "id": "2700d609-fbf9-463e-89f0-acedb8800aee",
+              "turnId": "0abf6683-d684-41e5-9def-b2970668c88a",
+              "category": "administrative",
+              "status": "delivered",
+              "text": "You can give a final response in your own words, or finish with what you have already shared.",
+              "turnIndex": 1
+            }
+          ],
+          "inputFacts": [
+            "Text only; no audio or speech-recognition evidence.",
+            "Only the supplied recorded turns are available; no follow-up elicitation."
+          ]
+        },
+        "fingerprint": "d7b07f7d565f89257ad1b28708dfe4e1f7b0efc29bf763fea5671b182b070f4d",
+        "contextAtRequest": {
+          "state": "Illinois",
+          "framework": "WIDA",
+          "writing": null,
+          "reading": null
+        },
+        "requestedAt": "2026-11-20T19:41:25.224Z",
+        "completedAt": "2026-11-20T19:41:27.146Z",
+        "state": "results",
+        "observations": [
+          {
+            "categoryId": "C15",
+            "title": "Effective connection of personal claim to source account",
+            "status": "strength",
+            "studentSpans": [
+              {
+                "turnId": "c755d343-5dfe-4ddc-a0be-ad5939a43f41",
+                "quote": "In the passage, people make laws to avoid suffering injustice, so their reason is practical protection rather than valuing justice for itself."
+              }
+            ],
+            "contextTurnIds": [
+              "c755d343-5dfe-4ddc-a0be-ad5939a43f41"
+            ],
+            "sourceSpans": [
+              {
+                "paragraphId": "P2",
+                "quote": "they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants"
+              }
+            ],
+            "explanation": "The student successfully identifies the instrumental nature of justice within the passage and contrasts it with their own stated position, demonstrating a clear understanding of the claim-evidence relationship.",
+            "uncertainty": "None.",
+            "resolution": "current",
+            "repairSpans": [],
+            "id": "84737e68-0d87-49e1-ad35-862453dfbaa0",
+            "assistanceIds": []
+          }
+        ],
+        "decisions": [],
+        "error": null,
+        "httpStatus": null,
+        "model": "gemini-3.1-flash-lite",
+        "promptVersion": "language-observations-2026-11-20-v2",
+        "rawOutput": {
+          "candidates": [
+            {
+              "content": {
+                "parts": [
+                  {
+                    "text": "{\n  \"observations\": [\n    {\n      \"categoryId\": \"C15\",\n      \"title\": \"Effective connection of personal claim to source account\",\n      \"status\": \"strength\",\n      \"studentSpans\": [\n        {\n          \"turnId\": \"c755d343-5dfe-4ddc-a0be-ad5939a43f41\",\n          \"quote\": \"In the passage, people make laws to avoid suffering injustice, so their reason is practical protection rather than valuing justice for itself.\"\n        }\n      ],\n      \"contextTurnIds\": [\n        \"c755d343-5dfe-4ddc-a0be-ad5939a43f41\"\n      ],\n      \"sourceSpans\": [\n        {\n          \"paragraphId\": \"P2\",\n          \"quote\": \"they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants\"\n        }\n      ],\n      \"explanation\": \"The student successfully identifies the instrumental nature of justice within the passage and contrasts it with their own stated position, demonstrating a clear understanding of the claim-evidence relationship.\",\n      \"uncertainty\": \"None.\",\n      \"resolution\": \"current\",\n      \"repairSpans\": []\n    }\n  ]\n}",
+                    "thoughtSignature": "EqEBCp4BAWkUfROBKPtwD5BTRDMy24sslFJUDAl93v/gLAfKexjo9ib/3/+pQRk3u++m4PJ6TMyFV7ITy0RciYZyK4K+TMiGWlVkDV63Ynz7/DoLWofhNDYCl7zGz63gVaePQQLE8DAs+zUITmsjUR2zOIRzfYU0xepBIxHCSSPavKBNxS73BaOd4PQnhoI0xJ318VmbYgFBpVPApBslqHmspkM="
+                  }
+                ],
+                "role": "model"
+              },
+              "finishReason": "STOP",
+              "index": 0
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 1165,
+            "candidatesTokenCount": 301,
+            "totalTokenCount": 1466,
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 1165
+              }
+            ],
+            "serviceTier": "standard"
+          },
+          "modelVersion": "gemini-3.1-flash-lite",
+          "responseId": "ZaIAa6vQFb2eo_UP7ZKwiQM"
+        },
+        "usage": {
+          "promptTokenCount": 1165,
+          "candidatesTokenCount": 301,
+          "totalTokenCount": 1466,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 1165
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "latencyMs": 1922,
+        "inputStatus": null,
+        "changed": false
+      }
+    ],
+    "notice": "Provisional model suggestions and separate teacher decisions. Exact span checks do not establish semantic correctness or educational validity."
+  }
+}
