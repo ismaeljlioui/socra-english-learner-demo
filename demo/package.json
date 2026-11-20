@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node --env-file-if-exists=.env --import tsx server/index.ts",
-    "build": "npm run build:input && tsc --noEmit && vite build",
+    "build": "npm run build:input && tsc --noEmit && npm run check:server && vite build",
     "start": "node --env-file-if-exists=.env --import tsx server/index.ts --production",
     "test": "node --import tsx --test tests/*.test.ts",
     "evaluate": "node --env-file-if-exists=.env --import tsx scripts/evaluate.ts",
@@ -13,7 +13,8 @@
     "build:input": "tailwindcss -c tailwind.input.config.cjs -i src/prompt-utilities.input.css -o src/prompt-utilities.css --minify",
     "predev": "npm run build:input",
     "check:language": "node --import tsx scripts/check-language.ts",
-    "test:language-ui": "node --import tsx scripts/ui-language-fixture.ts"
+    "test:language-ui": "node --import tsx scripts/ui-language-fixture.ts",
+    "check:server": "tsc -p tsconfig.server.json && node scripts/check-server.mjs"
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.3.0",

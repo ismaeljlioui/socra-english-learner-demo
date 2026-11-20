@@ -1,8 +1,8 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { z } from "zod";
-import dialogues from "../data/dialogues.json";
-import type { Dialogue } from "../src/types";
-import { Controller, DemoError, exportSession } from "./controller";
+import dialogues from "../data/dialogues.json" with { type: "json" };
+import type { Dialogue } from "../src/types.js";
+import { Controller, DemoError, exportSession } from "./controller.js";
 import {
   configured,
   credentialsConfigured,
@@ -12,9 +12,9 @@ import {
   generationSettings,
   modelAdapter,
   languageModelAdapter,
-} from "./provider";
-import { cases, evaluationPlan, runEvaluation, createScenario, runScenario } from "./evaluation";
-import { LanguageService, targetSchema, contextSchema } from "./language-analysis";
+} from "./provider.js";
+import { cases, evaluationPlan, runEvaluation, createScenario, runScenario } from "./evaluation.js";
+import { LanguageService, targetSchema, contextSchema } from "./language-analysis.js";
 const language = new LanguageService(languageModelAdapter, modelId);
 const controller = new Controller(modelAdapter, dialogues as Dialogue[], {
   configured,

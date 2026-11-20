@@ -32,3 +32,4 @@ evaluations/*
 !evaluations/software-tests.tap
 
 .vercel/
+.runtime-check/

@@ -1,5 +1,5 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { handleAPI } from "../server/api";
+import { handleAPI } from "../server/api.js";
 
 // All /api/* routes share one function and its temporary in-memory demo state.
 export default function handler(req: IncomingMessage, res: ServerResponse) {

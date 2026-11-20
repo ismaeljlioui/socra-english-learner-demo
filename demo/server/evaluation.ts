@@ -1,5 +1,5 @@
 import { randomUUID, randomInt } from "node:crypto";
-import cases from "../data/cases.json";
+import cases from "../data/cases.json" with { type: "json" };
 import {
   Controller,
   DemoError,
@@ -7,9 +7,9 @@ import {
   deliver,
   exportSession,
   unobserved,
-} from "./controller";
-import type { Action } from "../src/task";
-import type { Condition, Session } from "../src/types";
+} from "./controller.js";
+import type { Action } from "../src/task.js";
+import type { Condition, Session } from "../src/types.js";
 
 export { cases };
 export function evaluationPlan(caseIds: string[], repeats = 3) {

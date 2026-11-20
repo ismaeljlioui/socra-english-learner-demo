@@ -1,4 +1,4 @@
-import type { Action, Criterion, EvidenceState } from "./task";
+import type { Action, Criterion, EvidenceState } from "./task.js";
 export type Phase = "eliciting" | "final_response" | "review" | "learning";
 export type Condition = "policy" | "baseline";
 export type Mode = "live" | "fixture";

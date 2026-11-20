@@ -1,4 +1,4 @@
-import { task } from "./task";
+import { task } from "./task.js";
 
 export type CaseStatus = "difficulty" | "unclear" | "strength" | "insufficient" | "limitation";
 export const caseStatusLabels: Record<CaseStatus, string> = {

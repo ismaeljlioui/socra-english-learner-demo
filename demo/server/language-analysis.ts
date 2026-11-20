@@ -1,11 +1,11 @@
 import { createHash, randomUUID } from "node:crypto";
 import { z } from "zod";
-import { task } from "../src/task";
-import { languageCases } from "../src/language-cases";
-import { defaultStudentContext, detectorCategories, targetKey, type AnalysisTarget, type LanguageSnapshot, type LanguageAnalysis, type StudentContext, type LanguageObservation } from "../src/language-analysis";
-import type { Session, ModelResult } from "../src/types";
-import { DemoError } from "./controller";
-import { ProviderError } from "./provider";
+import { task } from "../src/task.js";
+import { languageCases } from "../src/language-cases.js";
+import { defaultStudentContext, detectorCategories, targetKey, type AnalysisTarget, type LanguageSnapshot, type LanguageAnalysis, type StudentContext, type LanguageObservation } from "../src/language-analysis.js";
+import type { Session, ModelResult } from "../src/types.js";
+import { DemoError } from "./controller.js";
+import { ProviderError } from "./provider.js";
 export const PROMPT_VERSION = "language-observations-2026-11-20-v2";
 export const contextSchema = z.object({state:z.literal("Illinois"), framework:z.literal("WIDA"), writing:z.number().int().min(1).max(6).nullable(), reading:z.number().int().min(1).max(6).nullable()}).strict();
 export const targetSchema = z.discriminatedUnion("kind", [z.object({kind:z.literal("conversation")}).strict(), z.object({kind:z.literal("case"),caseId:z.string(),variant:z.enum(["example","comparison"])}).strict()]);

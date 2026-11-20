@@ -1,4 +1,4 @@
-import type { task } from "./task";
+import type { task } from "./task.js";
 export const detectorCategories = ["C02", "C06", "C10", "C11", "C15"] as const;
 export const languageStatusLabels = {strength:"Strength", difficulty:"Specific difficulty", unclear:"Unclear meaning", insufficient:"Insufficient evidence", limitation:"Input / assistance limitation"};
 export type StudentContext = {state:"Illinois"; framework:"WIDA"; writing:number|null; reading:number|null};

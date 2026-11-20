@@ -2,9 +2,9 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { handleAPI } from "./api";
-import { configured } from "./provider";
-import { DemoError } from "./controller";
+import { handleAPI } from "./api.js";
+import { configured } from "./provider.js";
+import { DemoError } from "./controller.js";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const production = process.argv.includes("--production");
 const vite = production

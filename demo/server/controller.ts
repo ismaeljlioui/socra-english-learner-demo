@@ -12,7 +12,7 @@ import {
   supportControls,
   type Action,
   type Criterion,
-} from "../src/task";
+} from "../src/task.js";
 import type {
   Dialogue,
   Evidence,
@@ -22,7 +22,7 @@ import type {
   Proposal,
   Session,
   Turn,
-} from "../src/types";
+} from "../src/types.js";
 
 const id = () => randomUUID();
 const now = () => new Date().toISOString();

@@ -7,8 +7,8 @@ import {
   states,
   task,
   templates,
-} from "../src/task";
-import type { ModelAdapter, Session } from "../src/types";
+} from "../src/task.js";
+import type { ModelAdapter, Session } from "../src/types.js";
 
 // Official documentation inspected 2026-11-05:
 // https://aistudio.google.com/api-reference/generate-content
