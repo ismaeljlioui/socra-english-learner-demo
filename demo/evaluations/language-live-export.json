@@ -1,0 +1,227 @@
+{
+  "schemaVersion": "0.1",
+  "exportedAt": "2026-11-20T18:46:27.197Z",
+  "evidenceStatus": "Provisional model suggestions; human review required",
+  "session": {
+    "id": "8a533efe-85c4-47a2-867b-b64c671f66e5",
+    "taskId": "glaucon-justice-v1",
+    "taskVersion": "0.1",
+    "rubricVersion": "0.1",
+    "policyVersion": "0.1",
+    "condition": "policy",
+    "mode": "live",
+    "modelId": "gemini-3.1-flash-lite",
+    "generationSettings": {
+      "provider": "Google Gemini",
+      "api": "generateContent v1beta",
+      "prompt_revision": "2026-11-05-contiguous-quotes",
+      "max_output_tokens": 5000,
+      "candidate_count": 1,
+      "response_mime_type": "application/json",
+      "structured_output": "responseJsonSchema; controller validation required",
+      "timeout_ms": 45000,
+      "temperature": "provider default (not explicitly set)",
+      "thinking": "provider default (not explicitly set)",
+      "automatic_retries": false,
+      "model_fallback": false,
+      "free_tier_verification": {
+        "verified": true,
+        "model": "gemini-3.1-flash-lite",
+        "observed_at": "2026-11-05T15:53:18.188Z",
+        "project": "Default Gemini Project",
+        "source": "saved_operator_confirmation",
+        "scope": "Saved operator confirmation of project Free tier and exact model eligibility; not a fresh billing check or API free-only switch. Reconfirm after changing the project, key, model, or billing tier.",
+        "quota_availability": "Not established by this verification; a request can still fail because of quota or rate limits."
+      }
+    },
+    "phase": "eliciting",
+    "createdAt": "2026-11-20T18:43:52.966Z",
+    "updatedAt": "2026-11-20T18:43:52.966Z",
+    "turns": [],
+    "supportEvents": [],
+    "observations": [
+      {
+        "criterionId": "C1",
+        "state": "not_yet_observed",
+        "studentTurnId": null,
+        "quote": "",
+        "explanation": "No substantive evidence has yet been recorded for this criterion.",
+        "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+      },
+      {
+        "criterionId": "C2",
+        "state": "not_yet_observed",
+        "studentTurnId": null,
+        "quote": "",
+        "explanation": "No substantive evidence has yet been recorded for this criterion.",
+        "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+      },
+      {
+        "criterionId": "C3",
+        "state": "not_yet_observed",
+        "studentTurnId": null,
+        "quote": "",
+        "explanation": "No substantive evidence has yet been recorded for this criterion.",
+        "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+      }
+    ],
+    "probes": [],
+    "consecutiveRepairs": 0,
+    "review": null,
+    "revisions": [],
+    "attempts": [],
+    "fixtureIndex": 0,
+    "finalSkipped": false,
+    "error": null,
+    "pending": null,
+    "processedRequests": {},
+    "reflectionIds": [],
+    "responseFeedback": []
+  },
+  "effectiveSupportContext": [],
+  "limitations": [
+    "Not a validated assessment or English-proficiency test.",
+    "Category labels do not establish absence of leakage.",
+    "Text behavior cannot establish speech reliability.",
+    "Human corrections are separate from the frozen original review."
+  ],
+  "language": {
+    "currentContext": {
+      "state": "Illinois",
+      "framework": "WIDA",
+      "writing": 2,
+      "reading": null
+    },
+    "analyses": [
+      {
+        "id": "28791034-95db-40ad-84da-a4e4ed3b814c",
+        "sessionId": "8a533efe-85c4-47a2-867b-b64c671f66e5",
+        "requestId": "cad44c45-7256-4f15-b830-1229c376488d",
+        "target": {
+          "kind": "case",
+          "caseId": "C06",
+          "variant": "example"
+        },
+        "snapshot": {
+          "assignment": {
+            "id": "glaucon-justice-v1",
+            "version": "0.1",
+            "context": "Glaucon presents an account of justice for Socrates to examine. Distinguish that account from your own position. You do not need knowledge of the rest of the book.",
+            "question": "Would justice still matter morally if it brought no practical advantages, such as safety or a good reputation? Explain your position and relate it to the account in the passage.",
+            "passages": [
+              {
+                "id": "P1",
+                "text": "They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good."
+              },
+              {
+                "id": "P2",
+                "text": "And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just."
+              }
+            ]
+          },
+          "turns": [
+            {
+              "id": "turn-1",
+              "role": "student",
+              "text": "In the passage, they make the agreement so they can do more injustice to other people.",
+              "phase": "authored transcript",
+              "timestamp": null
+            }
+          ],
+          "assistance": [],
+          "inputFacts": [
+            "Text only; no audio or speech-recognition evidence.",
+            "Only the supplied recorded turns are available; no follow-up elicitation."
+          ]
+        },
+        "fingerprint": "fd0632ce67da204179d69f2dd5bf8771caab7aa8e110e7831a910fb6e24b0777",
+        "contextAtRequest": {
+          "state": "Illinois",
+          "framework": "WIDA",
+          "writing": 2,
+          "reading": null
+        },
+        "requestedAt": "2026-11-20T18:43:52.974Z",
+        "completedAt": "2026-11-20T18:43:55.002Z",
+        "state": "failed",
+        "observations": [],
+        "decisions": [],
+        "error": "Gemini returned HTTP 400 (INVALID_ARGUMENT). No learner message was delivered. Check the server's API key, model access and request configuration.",
+        "httpStatus": 400,
+        "model": "gemini-3.1-flash-lite",
+        "promptVersion": "language-observations-2026-11-20-v1",
+        "rawOutput": {
+          "providerResponse": {
+            "error": {
+              "code": 400,
+              "message": "The specified schema produces a constraint that has too many states for serving. Typical causes of this error are schemas with lots of text (for example, very long property or enum names), schemas with long array length limits (especially when nested), or schemas using complex value matchers (for example, integers or numbers with minimum/maximum bounds or strings with complex formats like date-time)",
+              "status": "INVALID_ARGUMENT"
+            }
+          },
+          "httpStatus": 400,
+          "retryAfter": null,
+          "retryAfterSeconds": null
+        },
+        "usage": null,
+        "latencyMs": 2028,
+        "inputStatus": null,
+        "changed": false
+      },
+      {
+        "id": "a0922c91-242a-4ba9-848d-7456d99bb61d",
+        "sessionId": "8a533efe-85c4-47a2-867b-b64c671f66e5",
+        "requestId": "c66db485-8253-43b1-83cb-8d36b1fc4096",
+        "target": {
+          "kind": "conversation"
+        },
+        "snapshot": {
+          "assignment": {
+            "id": "glaucon-justice-v1",
+            "version": "0.1",
+            "context": "Glaucon presents an account of justice for Socrates to examine. Distinguish that account from your own position. You do not need knowledge of the rest of the book.",
+            "question": "Would justice still matter morally if it brought no practical advantages, such as safety or a good reputation? Explain your position and relate it to the account in the passage.",
+            "passages": [
+              {
+                "id": "P1",
+                "text": "They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good."
+              },
+              {
+                "id": "P2",
+                "text": "And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just."
+              }
+            ]
+          },
+          "turns": [],
+          "assistance": [],
+          "inputFacts": [
+            "Text only; no audio or speech-recognition evidence.",
+            "Only the supplied recorded turns are available; no follow-up elicitation.",
+            "No student response text is available."
+          ]
+        },
+        "fingerprint": "7fba99b65053d3ab50b9c291854b9114a6ba5c632865007cc75d5597bd894707",
+        "contextAtRequest": {
+          "state": "Illinois",
+          "framework": "WIDA",
+          "writing": 2,
+          "reading": null
+        },
+        "requestedAt": "2026-11-20T18:46:22.649Z",
+        "completedAt": "2026-11-20T18:46:22.649Z",
+        "state": "insufficient",
+        "observations": [],
+        "decisions": [],
+        "error": null,
+        "httpStatus": null,
+        "model": "gemini-3.1-flash-lite",
+        "promptVersion": "language-observations-2026-11-20-v1",
+        "rawOutput": null,
+        "usage": null,
+        "latencyMs": 0,
+        "inputStatus": "No student response text is available. No model call was made; no learner difficulty is inferred.",
+        "changed": false
+      }
+    ],
+    "notice": "Provisional model suggestions and separate teacher decisions. Exact span checks do not establish semantic correctness or educational validity."
+  }
+}

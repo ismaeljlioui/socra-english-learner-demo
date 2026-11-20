@@ -1,0 +1,307 @@
+{
+  "kind": "actual_integration_smoke_on_authored_synthetic_text",
+  "notAnEducationalEvaluation": true,
+  "record": {
+    "schemaVersion": "0.1",
+    "exportedAt": "2026-11-05T15:59:19.854Z",
+    "evidenceStatus": "Provisional model suggestions; human review required",
+    "session": {
+      "id": "4c642cbe-c6f8-40b7-bf2c-3bfe4e4d961f",
+      "taskId": "glaucon-justice-v1",
+      "taskVersion": "0.1",
+      "rubricVersion": "0.1",
+      "policyVersion": "0.1",
+      "condition": "policy",
+      "mode": "live",
+      "modelId": "gemini-3.1-flash-lite",
+      "generationSettings": {
+        "provider": "Google Gemini",
+        "api": "generateContent v1beta",
+        "prompt_revision": "2026-11-05-contiguous-quotes",
+        "max_output_tokens": 5000,
+        "candidate_count": 1,
+        "response_mime_type": "application/json",
+        "structured_output": "responseJsonSchema; controller validation required",
+        "timeout_ms": 45000,
+        "temperature": "provider default (not explicitly set)",
+        "thinking": "provider default (not explicitly set)",
+        "automatic_retries": false,
+        "model_fallback": false,
+        "free_tier_verification": {
+          "verified": true,
+          "model": "gemini-3.1-flash-lite",
+          "observed_at": "2026-11-05T15:53:18.188Z",
+          "project": "Default Gemini Project",
+          "maximum_age_hours": 24,
+          "scope": "Manual observation of project Free tier and exact model eligibility; not an immutable billing guarantee or API free-only switch.",
+          "quota_availability": "Not established by this verification; a request can still fail because of quota or rate limits."
+        }
+      },
+      "phase": "review",
+      "createdAt": "2026-11-05T15:56:46.999Z",
+      "updatedAt": "2026-11-05T15:57:48.952Z",
+      "turns": [
+        {
+          "id": "d5070ba8-b4f1-4da0-a13c-34389eef6b15",
+          "role": "student",
+          "text": "What is reputation?",
+          "timestamp": "2026-11-05T15:56:51.717Z",
+          "phase": "eliciting",
+          "precedingSupportEventIds": [],
+          "tags": []
+        },
+        {
+          "id": "6c6184ed-8d2f-4ef1-af2a-3297499fb633",
+          "role": "assistant",
+          "text": "What other people think about a person.",
+          "timestamp": "2026-11-05T15:56:53.023Z",
+          "phase": "eliciting",
+          "actionId": "define_incidental",
+          "precedingSupportEventIds": [],
+          "tags": []
+        },
+        {
+          "id": "83dae177-cdc3-4b71-bb1a-8a2290ceca32",
+          "role": "assistant",
+          "text": "You can give a final response in your own words, or finish with what you have already shared.",
+          "timestamp": "2026-11-05T15:57:44.163Z",
+          "phase": "eliciting",
+          "actionId": "offer_finish",
+          "precedingSupportEventIds": [
+            "545a2e6f-831c-4f7f-90fe-f61d9b9eb9f5"
+          ],
+          "tags": []
+        }
+      ],
+      "supportEvents": [
+        {
+          "id": "545a2e6f-831c-4f7f-90fe-f61d9b9eb9f5",
+          "requestTurnId": "d5070ba8-b4f1-4da0-a13c-34389eef6b15",
+          "triggerTurnId": "d5070ba8-b4f1-4da0-a13c-34389eef6b15",
+          "actionId": "define_incidental",
+          "plannedCategory": "access",
+          "deliveredTurnId": "6c6184ed-8d2f-4ef1-af2a-3297499fb633",
+          "requested": true,
+          "delivered": true,
+          "status": "delivered",
+          "reviewerCategory": "unreviewed",
+          "reviewNote": ""
+        },
+        {
+          "id": "e95a4817-fc27-449f-8590-ac94e8b38970",
+          "requestTurnId": null,
+          "triggerTurnId": null,
+          "actionId": "offer_finish",
+          "plannedCategory": "administrative",
+          "deliveredTurnId": "83dae177-cdc3-4b71-bb1a-8a2290ceca32",
+          "requested": true,
+          "delivered": true,
+          "status": "delivered",
+          "reviewerCategory": "unreviewed",
+          "reviewNote": ""
+        }
+      ],
+      "observations": [
+        {
+          "criterionId": "C1",
+          "state": "not_yet_observed",
+          "studentTurnId": null,
+          "quote": "",
+          "explanation": "No evidence observed.",
+          "unresolvedIssue": "none"
+        },
+        {
+          "criterionId": "C2",
+          "state": "not_yet_observed",
+          "studentTurnId": null,
+          "quote": "",
+          "explanation": "No evidence observed.",
+          "unresolvedIssue": "none"
+        },
+        {
+          "criterionId": "C3",
+          "state": "not_yet_observed",
+          "studentTurnId": null,
+          "quote": "",
+          "explanation": "No evidence observed.",
+          "unresolvedIssue": "none"
+        }
+      ],
+      "probes": [],
+      "consecutiveRepairs": 0,
+      "review": {
+        "status": "ready",
+        "origin": "model_suggestion",
+        "evidence": [
+          {
+            "criterionId": "C1",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No response has been provided by the student regarding the content of the passage.",
+            "unresolvedIssue": "The student has not yet interpreted the account of justice presented in the text.",
+            "id": "4f261b56-001f-4911-b272-f8040688df50",
+            "supportEventIds": []
+          },
+          {
+            "criterionId": "C2",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "The student has not stated a position on the hypothetical question.",
+            "unresolvedIssue": "The student has not addressed the question regarding whether justice matters without practical advantages.",
+            "id": "84b6aeb9-13f7-4c60-8ceb-68d8a4bb815a",
+            "supportEventIds": []
+          },
+          {
+            "criterionId": "C3",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "The student has not related a position to the passage.",
+            "unresolvedIssue": "The student has not yet connected a personal view to the text.",
+            "id": "992d4405-51eb-42e8-a5a3-60e8fa1b4049",
+            "supportEventIds": []
+          }
+        ],
+        "unresolvedQuestions": [
+          "The student has not yet answered the initial prompt or addressed the passage."
+        ],
+        "unmetSupportRequestIds": [],
+        "frozenCutoff": "83dae177-cdc3-4b71-bb1a-8a2290ceca32",
+        "frozenAt": "2026-11-05T15:57:47.503Z",
+        "notes": []
+      },
+      "revisions": [],
+      "attempts": [
+        {
+          "id": "6092847b-5c65-42fc-83b6-93b4e2fd5cc0",
+          "purpose": "next",
+          "timestamp": "2026-11-05T15:56:53.023Z",
+          "latencyMs": 1306,
+          "model": "gemini-3.1-flash-lite",
+          "usage": {
+            "promptTokenCount": 2237,
+            "candidatesTokenCount": 231,
+            "totalTokenCount": 2468,
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 2237
+              }
+            ],
+            "serviceTier": "standard"
+          },
+          "cost": null,
+          "rawOutput": {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "{\n  \"actionId\": \"define_incidental\",\n  \"termId\": \"reputation\",\n  \"observations\": [\n    {\n      \"criterionId\": \"C1\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"No evidence observed.\",\n      \"unresolvedIssue\": \"none\"\n    },\n    {\n      \"criterionId\": \"C2\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"No evidence observed.\",\n      \"unresolvedIssue\": \"none\"\n    },\n    {\n      \"criterionId\": \"C3\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"No evidence observed.\",\n      \"unresolvedIssue\": \"none\"\n    }\n  ],\n  \"unresolvedQuestions\": []\n}",
+                      "thoughtSignature": "EnMKcQFpFH0TR38X2Y5NifBGH5M86BlCezScMwfzGLiEyUM68ho+sY3k/BfZNRyoNxx+P43cS1aQeyotrhvdN9qJ+r20znM9tKCoVoVr04H4q2vmkFJk5lc8jr3GGLcc4l9PmGDOXVk5PSyQw2KTRKMMITog"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP",
+                "index": 0
+              }
+            ],
+            "usageMetadata": {
+              "promptTokenCount": 2237,
+              "candidatesTokenCount": 231,
+              "totalTokenCount": 2468,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 2237
+                }
+              ],
+              "serviceTier": "standard"
+            },
+            "modelVersion": "gemini-3.1-flash-lite",
+            "responseId": "RKfsarf_BLSuwbUP0OGC4AI"
+          },
+          "error": null
+        },
+        {
+          "id": "e5b48ae6-13ce-440a-ab19-8b4b69425d4a",
+          "purpose": "review",
+          "timestamp": "2026-11-05T15:57:48.952Z",
+          "latencyMs": 1449,
+          "model": "gemini-3.1-flash-lite",
+          "usage": {
+            "promptTokenCount": 2838,
+            "candidatesTokenCount": 311,
+            "totalTokenCount": 3149,
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 2838
+              }
+            ],
+            "serviceTier": "standard"
+          },
+          "cost": null,
+          "rawOutput": {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "{\n  \"actionId\": \"offer_finish\",\n  \"termId\": null,\n  \"observations\": [\n    {\n      \"criterionId\": \"C1\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"No response has been provided by the student regarding the content of the passage.\",\n      \"unresolvedIssue\": \"The student has not yet interpreted the account of justice presented in the text.\"\n    },\n    {\n      \"criterionId\": \"C2\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"The student has not stated a position on the hypothetical question.\",\n      \"unresolvedIssue\": \"The student has not addressed the question regarding whether justice matters without practical advantages.\"\n    },\n    {\n      \"criterionId\": \"C3\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"The student has not related a position to the passage.\",\n      \"unresolvedIssue\": \"The student has not yet connected a personal view to the text.\"\n    }\n  ],\n  \"unresolvedQuestions\": [\n    \"The student has not yet answered the initial prompt or addressed the passage.\"\n  ]\n}",
+                      "thoughtSignature": "EnMKcQFpFH0TTu4gM63kpLcB4IWTrAHSdVnXbeZ/gNlPqwaxFtZd5ipOPNkIYdFyNuEfUzvIKFh5bgEMDadN9KfDptj8e3tb9ljEow9I68IKTHcXU7Wft2BgYpuELv8X4TXRFHLDtf5oIlMRGWXOjUOJQdLM"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP",
+                "index": 0
+              }
+            ],
+            "usageMetadata": {
+              "promptTokenCount": 2838,
+              "candidatesTokenCount": 311,
+              "totalTokenCount": 3149,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 2838
+                }
+              ],
+              "serviceTier": "standard"
+            },
+            "modelVersion": "gemini-3.1-flash-lite",
+            "responseId": "e6fsasqSLrKKiLMP5-_5yAY"
+          },
+          "error": null
+        }
+      ],
+      "fixtureIndex": 0,
+      "finalSkipped": true,
+      "error": null,
+      "pending": null,
+      "processedRequests": {
+        "498edcc8-968a-4a65-94ec-1cc0ec236af2": "next",
+        "619085de-c1db-43d8-b733-0fc58271b96e": "finish",
+        "41a4ac76-99f4-430a-a61d-fab6d3cb8dc3": "review"
+      },
+      "reflectionIds": []
+    },
+    "effectiveSupportContext": [
+      {
+        "turnId": "d5070ba8-b4f1-4da0-a13c-34389eef6b15",
+        "supportEventIds": [],
+        "tags": []
+      }
+    ],
+    "limitations": [
+      "Not a validated assessment or English-proficiency test.",
+      "Category labels do not establish absence of leakage.",
+      "Text behavior cannot establish speech reliability.",
+      "Human corrections are separate from the frozen original review."
+    ]
+  }
+}

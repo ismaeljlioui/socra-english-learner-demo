@@ -1,0 +1,169 @@
+{
+  "kind": "actual_integration_smoke_on_authored_synthetic_text",
+  "notAnEducationalEvaluation": true,
+  "projectTierSource": "user confirmed Default Gemini Project on Free tier",
+  "records": [
+    {
+      "schemaVersion": "0.1",
+      "exportedAt": "2026-11-05T15:53:20.304Z",
+      "evidenceStatus": "Provisional model suggestions; human review required",
+      "session": {
+        "id": "969d79c4-0ab9-4ff3-934e-e68918473130",
+        "taskId": "glaucon-justice-v1",
+        "taskVersion": "0.1",
+        "rubricVersion": "0.1",
+        "policyVersion": "0.1",
+        "condition": "policy",
+        "mode": "live",
+        "modelId": "gemini-3.1-flash-lite",
+        "generationSettings": {
+          "provider": "Google Gemini",
+          "api": "generateContent v1beta",
+          "max_output_tokens": 5000,
+          "candidate_count": 1,
+          "response_mime_type": "application/json",
+          "structured_output": "responseJsonSchema; controller validation required",
+          "timeout_ms": 45000,
+          "temperature": "provider default (not explicitly set)",
+          "thinking": "provider default (not explicitly set)",
+          "automatic_retries": false,
+          "model_fallback": false,
+          "free_tier_verification": {
+            "verified": true,
+            "model": "gemini-3.1-flash-lite",
+            "observed_at": "2026-11-05T15:53:18.188Z",
+            "project": "Default Gemini Project",
+            "maximum_age_hours": 24,
+            "scope": "Manual observation of project Free tier and exact model eligibility; not an immutable billing guarantee or API free-only switch.",
+            "quota_availability": "Not established by this verification; a request can still fail because of quota or rate limits."
+          }
+        },
+        "phase": "eliciting",
+        "createdAt": "2026-11-05T15:53:18.389Z",
+        "updatedAt": "2026-11-05T15:53:20.304Z",
+        "turns": [
+          {
+            "id": "5c018ae9-1f77-4ee5-b45e-7eae6c3f9434",
+            "role": "student",
+            "text": "They make agreement because hurt worse than doing hurt good for them. I think justice still matter. Person deserve fair even nobody reward. Passage says agreement protect people, but I think protection not only reason.",
+            "timestamp": "2026-11-05T15:53:18.390Z",
+            "phase": "eliciting",
+            "precedingSupportEventIds": [],
+            "tags": []
+          }
+        ],
+        "supportEvents": [],
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          },
+          {
+            "criterionId": "C2",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          },
+          {
+            "criterionId": "C3",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          }
+        ],
+        "probes": [],
+        "consecutiveRepairs": 0,
+        "review": null,
+        "revisions": [],
+        "attempts": [
+          {
+            "id": "18aadc60-5b89-4a8e-be68-4d6fe9253e5f",
+            "purpose": "next",
+            "timestamp": "2026-11-05T15:53:20.304Z",
+            "latencyMs": 1913,
+            "model": "gemini-3.1-flash-lite",
+            "usage": {
+              "promptTokenCount": 2227,
+              "candidatesTokenCount": 448,
+              "totalTokenCount": 2675,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 2227
+                }
+              ],
+              "serviceTier": "standard"
+            },
+            "cost": null,
+            "rawOutput": {
+              "candidates": [
+                {
+                  "content": {
+                    "parts": [
+                      {
+                        "text": "{\n  \"actionId\": \"probe_reason\",\n  \"termId\": null,\n  \"observations\": [\n    {\n      \"criterionId\": \"C1\",\n      \"state\": \"evidence_present\",\n      \"studentTurnId\": \"5c018ae9-1f77-4ee5-b45e-7eae6c3f9434\",\n      \"quote\": \"They make agreement because hurt worse than doing hurt good for them. ... Passage says agreement protect people\",\n      \"explanation\": \"The student correctly connects the formation of the agreement to the participants' evaluation that suffering injustice is worse than the benefit of committing it.\",\n      \"unresolvedIssue\": \"\"\n    },\n    {\n      \"criterionId\": \"C2\",\n      \"state\": \"partial\",\n      \"studentTurnId\": \"5c018ae9-1f77-4ee5-b45e-7eae6c3f9434\",\n      \"quote\": \"I think justice still matter. Person deserve fair even nobody reward.\",\n      \"explanation\": \"The student provides a position on the hypothetical, but the reasoning behind why a person 'deserve[s] fair' is not yet fully articulated.\",\n      \"unresolvedIssue\": \"Elaboration on why justice matters in the absence of rewards is needed.\"\n    },\n    {\n      \"criterionId\": \"C3\",\n      \"state\": \"evidence_present\",\n      \"studentTurnId\": \"5c018ae9-1f77-4ee5-b45e-7eae6c3f9434\",\n      \"quote\": \"Passage says agreement protect people, but I think protection not only reason.\",\n      \"explanation\": \"The student relates their position to the passage by identifying that protection is a stated reason for justice in the text, while expressing disagreement that it is the exclusive reason.\",\n      \"unresolvedIssue\": \"\"\n    }\n  ],\n  \"unresolvedQuestions\": []\n}",
+                        "thoughtSignature": "EnMKcQFpFH0Tlskln6kbYzAZ1LzA9O4VziQUlXsGtzpG1Ep2rwCPwY+GkJ59zojQxu/M+cFFehSD2qRJpwe/ijay6y15isAkfjsJ+oZxpSltdwXVG2lH/kgYfrmirJ/28o/FNmfY3ffDMwKy+SAiS5ejcieK"
+                      }
+                    ],
+                    "role": "model"
+                  },
+                  "finishReason": "STOP",
+                  "index": 0
+                }
+              ],
+              "usageMetadata": {
+                "promptTokenCount": 2227,
+                "candidatesTokenCount": 448,
+                "totalTokenCount": 2675,
+                "promptTokensDetails": [
+                  {
+                    "modality": "TEXT",
+                    "tokenCount": 2227
+                  }
+                ],
+                "serviceTier": "standard"
+              },
+              "modelVersion": "gemini-3.1-flash-lite",
+              "responseId": "bqbsauzeLraU5NoPpfSAgQc"
+            },
+            "error": "Evidence rejected: quote must be an exact substring of a referenced pre-help student turn.",
+            "httpStatus": 422,
+            "errorCode": null,
+            "retryAfterSeconds": null
+          }
+        ],
+        "fixtureIndex": 0,
+        "finalSkipped": false,
+        "error": "Evidence rejected: quote must be an exact substring of a referenced pre-help student turn.",
+        "pending": {
+          "requestId": "ae0cf3d8-edcd-4fa2-9703-43bac84f025c",
+          "turnId": "5c018ae9-1f77-4ee5-b45e-7eae6c3f9434",
+          "purpose": "next"
+        },
+        "processedRequests": {},
+        "reflectionIds": []
+      },
+      "effectiveSupportContext": [
+        {
+          "turnId": "5c018ae9-1f77-4ee5-b45e-7eae6c3f9434",
+          "supportEventIds": [],
+          "tags": []
+        }
+      ],
+      "limitations": [
+        "Not a validated assessment or English-proficiency test.",
+        "Category labels do not establish absence of leakage.",
+        "Text behavior cannot establish speech reliability.",
+        "Human corrections are separate from the frozen original review."
+      ]
+    }
+  ]
+}

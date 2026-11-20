@@ -1,0 +1,229 @@
+{
+  "schemaVersion": "0.1",
+  "exportedAt": "2026-11-05T15:20:19.172Z",
+  "evidenceStatus": "Scripted example — not live AI",
+  "session": {
+    "id": "f9f9cccc-a69b-4f15-a957-85b71db9fe67",
+    "taskId": "glaucon-justice-v1",
+    "taskVersion": "0.1",
+    "rubricVersion": "0.1",
+    "policyVersion": "0.1",
+    "condition": "policy",
+    "mode": "fixture",
+    "modelId": null,
+    "generationSettings": {},
+    "phase": "learning",
+    "createdAt": "2026-11-05T15:19:15.955Z",
+    "updatedAt": "2026-11-05T15:19:53.173Z",
+    "turns": [
+      {
+        "id": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+        "role": "student",
+        "text": "They make agreement because hurt worse than doing hurt good for them. I think justice still matter. Person deserve fair even nobody reward. Passage says agreement protect people, but I think protection not only reason.",
+        "timestamp": "2026-11-05T15:19:24.751Z",
+        "phase": "eliciting",
+        "precedingSupportEventIds": [],
+        "tags": [
+          "scripted_step_0",
+          "initial_response"
+        ],
+        "substantive": true
+      },
+      {
+        "id": "267fd5b9-0d02-458d-bff7-8f20fa460472",
+        "role": "assistant",
+        "text": "You can give a final response in your own words, or finish with what you have already shared.",
+        "timestamp": "2026-11-05T15:19:24.752Z",
+        "phase": "eliciting",
+        "actionId": "offer_finish",
+        "precedingSupportEventIds": [],
+        "tags": []
+      },
+      {
+        "id": "5a374af1-14be-43a0-bda0-02696d63bdc7",
+        "role": "assistant",
+        "text": "The passage describes an agreement people make to avoid suffering injustice. The assignment asks you to consider whether justice could matter for a reason other than practical benefits. You may agree or disagree with the account; explain your reasoning.",
+        "timestamp": "2026-11-05T15:19:52.869Z",
+        "phase": "learning",
+        "actionId": "learning_note",
+        "precedingSupportEventIds": [
+          "1ded8438-bbbe-40da-9c11-7708f3a6a240"
+        ],
+        "tags": []
+      },
+      {
+        "id": "ae573ef7-cec1-4f56-9071-511916f53826",
+        "role": "student",
+        "text": "QA-only authored reflection after the learning note.",
+        "timestamp": "2026-11-05T15:19:53.173Z",
+        "phase": "learning",
+        "precedingSupportEventIds": [
+          "1ded8438-bbbe-40da-9c11-7708f3a6a240",
+          "14d5771d-f9e4-4e83-9f9d-14410bbefe72"
+        ],
+        "adjacentAssistantAction": "learning_note",
+        "tags": [
+          "after_content_assistance",
+          "after_content_assistance",
+          "post_help_reflection"
+        ]
+      }
+    ],
+    "supportEvents": [
+      {
+        "id": "1ded8438-bbbe-40da-9c11-7708f3a6a240",
+        "requestTurnId": null,
+        "triggerTurnId": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+        "actionId": "offer_finish",
+        "plannedCategory": "administrative",
+        "deliveredTurnId": "267fd5b9-0d02-458d-bff7-8f20fa460472",
+        "requested": false,
+        "delivered": true,
+        "status": "delivered",
+        "reviewerCategory": "unreviewed",
+        "reviewNote": ""
+      },
+      {
+        "id": "14d5771d-f9e4-4e83-9f9d-14410bbefe72",
+        "requestTurnId": null,
+        "triggerTurnId": null,
+        "actionId": "learning_note",
+        "plannedCategory": "content_assistance",
+        "deliveredTurnId": "5a374af1-14be-43a0-bda0-02696d63bdc7",
+        "requested": false,
+        "delivered": true,
+        "status": "delivered",
+        "reviewerCategory": "unreviewed",
+        "reviewNote": ""
+      }
+    ],
+    "observations": [
+      {
+        "criterionId": "C1",
+        "state": "evidence_present",
+        "studentTurnId": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+        "quote": "They make agreement because hurt worse than doing hurt good for them.",
+        "explanation": "The student explains the relation between the harm of suffering injustice and the agreement.",
+        "unresolvedIssue": ""
+      },
+      {
+        "criterionId": "C2",
+        "state": "evidence_present",
+        "studentTurnId": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+        "quote": "I think justice still matter. Person deserve fair even nobody reward.",
+        "explanation": "The student states that justice matters without reward and gives fair treatment as a reason.",
+        "unresolvedIssue": ""
+      },
+      {
+        "criterionId": "C3",
+        "state": "evidence_present",
+        "studentTurnId": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+        "quote": "Passage says agreement protect people, but I think protection not only reason.",
+        "explanation": "The student distinguishes the account’s protective benefit from their own reason for valuing justice.",
+        "unresolvedIssue": ""
+      }
+    ],
+    "probes": [],
+    "consecutiveRepairs": 0,
+    "review": {
+      "status": "ready",
+      "origin": "authored_fixture",
+      "evidence": [
+        {
+          "criterionId": "C1",
+          "state": "evidence_present",
+          "studentTurnId": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+          "quote": "They make agreement because hurt worse than doing hurt good for them.",
+          "explanation": "The student explains the relation between the harm of suffering injustice and the agreement.",
+          "unresolvedIssue": "",
+          "id": "53ae7839-2c0b-4436-811d-2801f485cd88",
+          "supportEventIds": []
+        },
+        {
+          "criterionId": "C2",
+          "state": "evidence_present",
+          "studentTurnId": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+          "quote": "I think justice still matter. Person deserve fair even nobody reward.",
+          "explanation": "The student states that justice matters without reward and gives fair treatment as a reason.",
+          "unresolvedIssue": "",
+          "id": "5bcc72e3-d3a4-4b64-a916-9d46c1436a47",
+          "supportEventIds": []
+        },
+        {
+          "criterionId": "C3",
+          "state": "evidence_present",
+          "studentTurnId": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+          "quote": "Passage says agreement protect people, but I think protection not only reason.",
+          "explanation": "The student distinguishes the account’s protective benefit from their own reason for valuing justice.",
+          "unresolvedIssue": "",
+          "id": "9653c2bd-4c11-420b-9ce2-eae2c15d3282",
+          "supportEventIds": []
+        }
+      ],
+      "unresolvedQuestions": [],
+      "unmetSupportRequestIds": [],
+      "frozenCutoff": "267fd5b9-0d02-458d-bff7-8f20fa460472",
+      "frozenAt": "2026-11-05T15:19:26.151Z",
+      "notes": [
+        "Scripted example — not live AI. Evidence interpretations are authored and provisional.",
+        "The authored final instruction is “Use what I said.” Choose Use earlier responses to preserve the earlier student words.",
+        "Use “no recorded support before this response”; do not infer independent mastery or a WIDA level.",
+        "The moral stance is not privileged over the competing stance in T03."
+      ]
+    },
+    "revisions": [
+      {
+        "targetType": "evidence",
+        "targetId": "53ae7839-2c0b-4436-811d-2801f485cd88",
+        "category": "partial",
+        "note": "Testing correction storage only; not an educator judgment.",
+        "reviewer": "Implementation QA · synthetic correction",
+        "id": "bad29e6c-fda3-4b36-85ec-ec6f8471c578",
+        "timestamp": "2026-11-05T15:19:33.557Z"
+      }
+    ],
+    "attempts": [],
+    "fixtureId": "D1",
+    "fixtureIndex": 1,
+    "finalSkipped": true,
+    "error": null,
+    "pending": null,
+    "processedRequests": {
+      "8d716ddc-44af-4877-a292-90b6524c4e80": "advance",
+      "be3ff580-bee2-4b6d-8c8a-0feb91dd0d59": "finalize",
+      "d839b103-7cb5-4eea-b8f5-4628e30115bb": "revision",
+      "d1547448-55a8-41d9-82a5-94557ec79431": "learning",
+      "98d2ae86-f92f-433d-ab00-cdec3fe356a3": "reflection"
+    },
+    "reflectionIds": [
+      "ae573ef7-cec1-4f56-9071-511916f53826"
+    ]
+  },
+  "effectiveSupportContext": [
+    {
+      "turnId": "866002c1-e1fc-4e02-8287-ce51ddde5d47",
+      "supportEventIds": [],
+      "tags": [
+        "scripted_step_0",
+        "initial_response"
+      ]
+    },
+    {
+      "turnId": "ae573ef7-cec1-4f56-9071-511916f53826",
+      "supportEventIds": [
+        "1ded8438-bbbe-40da-9c11-7708f3a6a240",
+        "14d5771d-f9e4-4e83-9f9d-14410bbefe72"
+      ],
+      "tags": [
+        "after_content_assistance",
+        "post_help_reflection"
+      ]
+    }
+  ],
+  "limitations": [
+    "Not a validated assessment or English-proficiency test.",
+    "Category labels do not establish absence of leakage.",
+    "Text behavior cannot establish speech reliability.",
+    "Human corrections are separate from the frozen original review."
+  ]
+}

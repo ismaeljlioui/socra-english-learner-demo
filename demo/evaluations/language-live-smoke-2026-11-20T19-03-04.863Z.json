@@ -1,0 +1,434 @@
+{
+  "createdAt": "2026-11-20T19:03:04.859Z",
+  "model": "gemini-3.1-flash-lite",
+  "analysisRequests": 3,
+  "records": [
+    {
+      "id": "e414c267-aad8-4d83-9217-c2d136b1e6ce",
+      "sessionId": "b78d6730-6bb2-42cb-a596-203bc55e2d47",
+      "requestId": "71243161-4eed-4730-be80-5aada77c0569",
+      "target": {
+        "kind": "case",
+        "caseId": "C06",
+        "variant": "example"
+      },
+      "snapshot": {
+        "assignment": {
+          "id": "glaucon-justice-v1",
+          "version": "0.1",
+          "context": "Glaucon presents an account of justice for Socrates to examine. Distinguish that account from your own position. You do not need knowledge of the rest of the book.",
+          "question": "Would justice still matter morally if it brought no practical advantages, such as safety or a good reputation? Explain your position and relate it to the account in the passage.",
+          "passages": [
+            {
+              "id": "P1",
+              "text": "They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good."
+            },
+            {
+              "id": "P2",
+              "text": "And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just."
+            }
+          ]
+        },
+        "turns": [
+          {
+            "id": "turn-1",
+            "role": "student",
+            "text": "In the passage, they make the agreement so they can do more injustice to other people.",
+            "phase": "authored transcript",
+            "timestamp": null
+          }
+        ],
+        "assistance": [],
+        "inputFacts": [
+          "Text only; no audio or speech-recognition evidence.",
+          "Only the supplied recorded turns are available; no follow-up elicitation."
+        ]
+      },
+      "fingerprint": "fd0632ce67da204179d69f2dd5bf8771caab7aa8e110e7831a910fb6e24b0777",
+      "contextAtRequest": {
+        "state": "Illinois",
+        "framework": "WIDA",
+        "writing": 2,
+        "reading": null
+      },
+      "requestedAt": "2026-11-20T19:03:04.881Z",
+      "completedAt": "2026-11-20T19:03:07.357Z",
+      "state": "results",
+      "observations": [
+        {
+          "categoryId": "C06",
+          "title": "Logical-relationship mismatch",
+          "status": "difficulty",
+          "studentSpans": [
+            {
+              "turnId": "turn-1",
+              "quote": "they make the agreement so they can do more injustice to other people"
+            }
+          ],
+          "contextTurnIds": [
+            "turn-1"
+          ],
+          "sourceSpans": [
+            {
+              "paragraphId": "P2",
+              "quote": "they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants"
+            }
+          ],
+          "explanation": "The student interprets the agreement in the text as a strategy to facilitate committing injustice, whereas the source text presents the agreement as a mutual compromise to avoid both the doing and suffering of injustice.",
+          "uncertainty": "The student may be interpreting 'the agreement' as a tool for collective or selective action not present in the text, or misreading the purpose of 'laws and mutual covenants'.",
+          "resolution": "current",
+          "repairSpans": [],
+          "id": "07f8dd23-c9f6-40a4-abfe-eb8ed9a5a15a",
+          "assistanceIds": []
+        }
+      ],
+      "decisions": [],
+      "error": null,
+      "httpStatus": null,
+      "model": "gemini-3.1-flash-lite",
+      "promptVersion": "language-observations-2026-11-20-v2",
+      "rawOutput": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"observations\": [\n    {\n      \"categoryId\": \"C06\",\n      \"title\": \"Logical-relationship mismatch\",\n      \"status\": \"difficulty\",\n      \"studentSpans\": [\n        {\n          \"turnId\": \"turn-1\",\n          \"quote\": \"they make the agreement so they can do more injustice to other people\"\n        }\n      ],\n      \"contextTurnIds\": [\n        \"turn-1\"\n      ],\n      \"sourceSpans\": [\n        {\n          \"paragraphId\": \"P2\",\n          \"quote\": \"they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants\"\n        }\n      ],\n      \"explanation\": \"The student interprets the agreement in the text as a strategy to facilitate committing injustice, whereas the source text presents the agreement as a mutual compromise to avoid both the doing and suffering of injustice.\",\n      \"uncertainty\": \"The student may be interpreting 'the agreement' as a tool for collective or selective action not present in the text, or misreading the purpose of 'laws and mutual covenants'.\",\n      \"resolution\": \"current\",\n      \"repairSpans\": []\n    }\n  ]\n}",
+                  "thoughtSignature": "EqEBCp4BAWkUfRMkG414VX713BZuvUdEaIJhyF3+7wS9i6DrhPmV5vBcSuIY0FkAwvIbHeQskCr9mpf0kzX0ghuQi0bEgnV9NsOFegPjW8m1CdBLWXOCmkBOzjwF+rVboS84pEDzRW78nDOYPNA56vlojkcdPl16bLxq42w7P64DlEdk4tBBifSn/V81TNCWv7o9Js0aP0pPMMs5WBVX/ZhthhQ="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 890,
+          "candidatesTokenCount": 269,
+          "totalTokenCount": 1159,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 890
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.1-flash-lite",
+        "responseId": "aZkAa-2EFIW3xdIPmaCLwQU"
+      },
+      "usage": {
+        "promptTokenCount": 890,
+        "candidatesTokenCount": 269,
+        "totalTokenCount": 1159,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 890
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "latencyMs": 2476,
+      "inputStatus": null,
+      "changed": false
+    },
+    {
+      "id": "a8204112-f57f-4da3-bcc2-7b0925ad60b3",
+      "sessionId": "b78d6730-6bb2-42cb-a596-203bc55e2d47",
+      "requestId": "ae05fe37-9edb-4b73-bbc6-7d5679cf1044",
+      "target": {
+        "kind": "case",
+        "caseId": "C06",
+        "variant": "comparison"
+      },
+      "snapshot": {
+        "assignment": {
+          "id": "glaucon-justice-v1",
+          "version": "0.1",
+          "context": "Glaucon presents an account of justice for Socrates to examine. Distinguish that account from your own position. You do not need knowledge of the rest of the book.",
+          "question": "Would justice still matter morally if it brought no practical advantages, such as safety or a good reputation? Explain your position and relate it to the account in the passage.",
+          "passages": [
+            {
+              "id": "P1",
+              "text": "They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good."
+            },
+            {
+              "id": "P2",
+              "text": "And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just."
+            }
+          ]
+        },
+        "turns": [
+          {
+            "id": "turn-1",
+            "role": "student",
+            "text": "They make agreement because they no want get hurt. They agree not hurt each other.",
+            "phase": "authored transcript",
+            "timestamp": null
+          }
+        ],
+        "assistance": [],
+        "inputFacts": [
+          "Text only; no audio or speech-recognition evidence.",
+          "Only the supplied recorded turns are available; no follow-up elicitation."
+        ]
+      },
+      "fingerprint": "ea25ffff68049bba3f1ed623f40e73303d811449ce5141db1281bdad4d5a2c8d",
+      "contextAtRequest": {
+        "state": "Illinois",
+        "framework": "WIDA",
+        "writing": 2,
+        "reading": null
+      },
+      "requestedAt": "2026-11-20T19:03:07.911Z",
+      "completedAt": "2026-11-20T19:03:09.608Z",
+      "state": "results",
+      "observations": [
+        {
+          "categoryId": "C15",
+          "title": "Unexpressed claim-evidence connection",
+          "status": "insufficient",
+          "studentSpans": [
+            {
+              "turnId": "turn-1",
+              "quote": "They make agreement because they no want get hurt. They agree not hurt each other."
+            }
+          ],
+          "contextTurnIds": [
+            "turn-1"
+          ],
+          "sourceSpans": [
+            {
+              "paragraphId": "P2",
+              "quote": "hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just."
+            }
+          ],
+          "explanation": "The student identifies the motive for social agreements (avoiding harm) but does not explicitly connect this summary to the broader prompt question regarding whether justice matters without practical advantages.",
+          "uncertainty": "It is unknown if the student considers the desire to avoid harm a practical advantage or if they intend to contrast this with an internal moral value of justice.",
+          "resolution": "current",
+          "repairSpans": [],
+          "id": "ef9db023-300e-4ff7-aac2-5f0d9e5982b3",
+          "assistanceIds": []
+        }
+      ],
+      "decisions": [],
+      "error": null,
+      "httpStatus": null,
+      "model": "gemini-3.1-flash-lite",
+      "promptVersion": "language-observations-2026-11-20-v2",
+      "rawOutput": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"observations\": [\n    {\n      \"categoryId\": \"C15\",\n      \"title\": \"Unexpressed claim-evidence connection\",\n      \"status\": \"insufficient\",\n      \"studentSpans\": [\n        {\n          \"turnId\": \"turn-1\",\n          \"quote\": \"They make agreement because they no want get hurt. They agree not hurt each other.\"\n        }\n      ],\n      \"contextTurnIds\": [\n        \"turn-1\"\n      ],\n      \"sourceSpans\": [\n        {\n          \"paragraphId\": \"P2\",\n          \"quote\": \"hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just.\"\n        }\n      ],\n      \"explanation\": \"The student identifies the motive for social agreements (avoiding harm) but does not explicitly connect this summary to the broader prompt question regarding whether justice matters without practical advantages.\",\n      \"uncertainty\": \"It is unknown if the student considers the desire to avoid harm a practical advantage or if they intend to contrast this with an internal moral value of justice.\",\n      \"resolution\": \"current\",\n      \"repairSpans\": []\n    }\n  ]\n}",
+                  "thoughtSignature": "EqEBCp4BAWkUfRN7J++H9xVa1FQCYIaNlNRyL2BlV/ZF9FZ4MqxqPXkyH8rvjjRGx4HRitTY1IgsP5BfJPIvmUDP/IKmRSfek6Q/LRJpBXh76Y7UL8oAbdnrIffp9HLD82Jy2ZQIIc/9khANuprwocK0GBeDC0oRcmMb65/hdGH552tiNG9TN5WjEOEo1W9x6NwSQiEw+hCjia7RXdx34Uf9vEg="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 889,
+          "candidatesTokenCount": 267,
+          "totalTokenCount": 1156,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 889
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.1-flash-lite",
+        "responseId": "a5kAa6T0PPejuMYP8eOp0Ag"
+      },
+      "usage": {
+        "promptTokenCount": 889,
+        "candidatesTokenCount": 267,
+        "totalTokenCount": 1156,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 889
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "latencyMs": 1697,
+      "inputStatus": null,
+      "changed": false
+    },
+    {
+      "id": "ec653413-d437-4095-8b92-51cc0db7e670",
+      "sessionId": "b78d6730-6bb2-42cb-a596-203bc55e2d47",
+      "requestId": "0e7372a6-45c2-4354-ac15-c8e9407a5883",
+      "target": {
+        "kind": "case",
+        "caseId": "C10",
+        "variant": "example"
+      },
+      "snapshot": {
+        "assignment": {
+          "id": "glaucon-justice-v1",
+          "version": "0.1",
+          "context": "Glaucon presents an account of justice for Socrates to examine. Distinguish that account from your own position. You do not need knowledge of the rest of the book.",
+          "question": "Would justice still matter morally if it brought no practical advantages, such as safety or a good reputation? Explain your position and relate it to the account in the passage.",
+          "passages": [
+            {
+              "id": "P1",
+              "text": "They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good."
+            },
+            {
+              "id": "P2",
+              "text": "And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just."
+            }
+          ]
+        },
+        "turns": [
+          {
+            "id": "turn-1",
+            "role": "student",
+            "text": "Glaucon and Socrates are the two people in the task context.",
+            "phase": "authored transcript",
+            "timestamp": null
+          },
+          {
+            "id": "turn-2",
+            "role": "student",
+            "text": "He disagrees with him.",
+            "phase": "authored transcript",
+            "timestamp": null
+          }
+        ],
+        "assistance": [],
+        "inputFacts": [
+          "Text only; no audio or speech-recognition evidence.",
+          "Only the supplied recorded turns are available; no follow-up elicitation."
+        ]
+      },
+      "fingerprint": "a3f66a9b4348411ead19947e7c7076d8e1acf181e1be9ceebce017becce6b36c",
+      "contextAtRequest": {
+        "state": "Illinois",
+        "framework": "WIDA",
+        "writing": 2,
+        "reading": null
+      },
+      "requestedAt": "2026-11-20T19:03:09.922Z",
+      "completedAt": "2026-11-20T19:03:11.376Z",
+      "state": "results",
+      "observations": [
+        {
+          "categoryId": "C10",
+          "title": "Unclear reference to interlocutors",
+          "status": "difficulty",
+          "studentSpans": [
+            {
+              "turnId": "turn-2",
+              "quote": "He"
+            }
+          ],
+          "contextTurnIds": [
+            "turn-1",
+            "turn-2"
+          ],
+          "sourceSpans": [],
+          "explanation": "The student references 'He' without specifying whether this refers to Glaucon, Socrates, or an implied author, making the statement of disagreement ambiguous regarding the parties involved.",
+          "uncertainty": "It is unclear if the student assumes the reader can map the pronoun to the context provided in turn-1 or if they are conflating the roles.",
+          "resolution": "current",
+          "repairSpans": [],
+          "id": "f8829029-229a-45e4-a555-d57d4e0af025",
+          "assistanceIds": []
+        },
+        {
+          "categoryId": "C11",
+          "title": "Attribution of disagreement",
+          "status": "difficulty",
+          "studentSpans": [
+            {
+              "turnId": "turn-2",
+              "quote": "He disagrees with him."
+            }
+          ],
+          "contextTurnIds": [
+            "turn-1",
+            "turn-2"
+          ],
+          "sourceSpans": [
+            {
+              "paragraphId": "P1",
+              "quote": "They say that to do injustice is, by nature, good"
+            }
+          ],
+          "explanation": "The student asserts a disagreement ('He disagrees with him') without attributing the position to a specific source passage or clearly explaining the nature of the disagreement regarding the provided account of justice.",
+          "uncertainty": "It is unknown if the student is referring to the source text or an outside assumption about the characters.",
+          "resolution": "current",
+          "repairSpans": [],
+          "id": "e31214fa-356d-4d2c-b0e4-5640112b4817",
+          "assistanceIds": []
+        }
+      ],
+      "decisions": [],
+      "error": null,
+      "httpStatus": null,
+      "model": "gemini-3.1-flash-lite",
+      "promptVersion": "language-observations-2026-11-20-v2",
+      "rawOutput": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\"observations\":[{\"categoryId\":\"C10\",\"title\":\"Unclear reference to interlocutors\",\"status\":\"difficulty\",\"studentSpans\":[{\"turnId\":\"turn-2\",\"quote\":\"He\"}],\"contextTurnIds\":[\"turn-1\",\"turn-2\"],\"sourceSpans\":[],\"explanation\":\"The student references 'He' without specifying whether this refers to Glaucon, Socrates, or an implied author, making the statement of disagreement ambiguous regarding the parties involved.\",\"uncertainty\":\"It is unclear if the student assumes the reader can map the pronoun to the context provided in turn-1 or if they are conflating the roles.\",\"resolution\":\"current\",\"repairSpans\":[]},{\"categoryId\":\"C11\",\"title\":\"Attribution of disagreement\",\"status\":\"difficulty\",\"studentSpans\":[{\"turnId\":\"turn-2\",\"quote\":\"He disagrees with him.\"}],\"contextTurnIds\":[\"turn-1\",\"turn-2\"],\"sourceSpans\":[{\"paragraphId\":\"P1\",\"quote\":\"They say that to do injustice is, by nature, good\"}],\"explanation\":\"The student asserts a disagreement ('He disagrees with him') without attributing the position to a specific source passage or clearly explaining the nature of the disagreement regarding the provided account of justice.\",\"uncertainty\":\"It is unknown if the student is referring to the source text or an outside assumption about the characters.\",\"resolution\":\"current\",\"repairSpans\":[]}]}",
+                  "thoughtSignature": "EqEBCp4BAWkUfRMs2WnWioEOJw0jjrBRU/it/2z5s04y5eKEBrspGmoZktT43tYt7cHxlVOzb5lzNxSC0UrbT9CUiF/ejiaE8weUNj2sOdZiob1pa2wqilaMiM7FF/x11dIGY1EFSmCVMhx61Hr0a/YhaJxWt+6n9uFNB268/VEYQLdm9vnzN3fakYG8g2aJmTdaS91ic99FwuGvtzL1meDlcSc="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 913,
+          "candidatesTokenCount": 283,
+          "totalTokenCount": 1196,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 913
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.1-flash-lite",
+        "responseId": "bpkAa_GfAfuRytMPufva6AI"
+      },
+      "usage": {
+        "promptTokenCount": 913,
+        "candidatesTokenCount": 283,
+        "totalTokenCount": 1196,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 913
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "latencyMs": 1454,
+      "inputStatus": null,
+      "changed": false
+    }
+  ],
+  "stopReason": null,
+  "notice": "Bounded plan of three synthetic smoke requests. This is not real-student validation or an estimate of accuracy. No retry or model substitution.",
+  "sessionId": "b78d6730-6bb2-42cb-a596-203bc55e2d47",
+  "url": "http://127.0.0.1:4317/?session=b78d6730-6bb2-42cb-a596-203bc55e2d47"
+}

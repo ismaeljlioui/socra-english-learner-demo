@@ -1,0 +1,282 @@
+{
+  "kind": "actual_integration_smoke_on_authored_synthetic_text",
+  "notAnEducationalEvaluation": true,
+  "projectTierSource": "user confirmed Default Gemini Project on Free tier",
+  "records": [
+    {
+      "schemaVersion": "0.1",
+      "exportedAt": "2026-11-05T15:44:23.646Z",
+      "evidenceStatus": "Provisional model suggestions; human review required",
+      "session": {
+        "id": "d7cb8c9c-a169-4ff1-b751-c16cf0752eb7",
+        "taskId": "glaucon-justice-v1",
+        "taskVersion": "0.1",
+        "rubricVersion": "0.1",
+        "policyVersion": "0.1",
+        "condition": "policy",
+        "mode": "live",
+        "modelId": "gemini-3.8-flash",
+        "generationSettings": {
+          "provider": "Google Gemini",
+          "api": "generateContent v1beta",
+          "max_output_tokens": 5000,
+          "candidate_count": 1,
+          "response_mime_type": "application/json",
+          "structured_output": "responseJsonSchema; controller validation required",
+          "timeout_ms": 45000,
+          "temperature": "provider default (not explicitly set)",
+          "thinking": "provider default (not explicitly set)",
+          "automatic_retries": false,
+          "model_fallback": false,
+          "free_tier_verification": {
+            "verified": true,
+            "model": "gemini-3.8-flash",
+            "observed_at": "2026-11-05T15:44:11.396Z",
+            "project": "Default Gemini Project",
+            "maximum_age_hours": 24,
+            "scope": "Manual observation of project Free tier and exact model eligibility; not an immutable billing guarantee or API free-only switch.",
+            "quota_availability": "Not established by this verification; a request can still fail because of quota or rate limits."
+          }
+        },
+        "phase": "eliciting",
+        "createdAt": "2026-11-05T15:44:22.626Z",
+        "updatedAt": "2026-11-05T15:44:23.646Z",
+        "turns": [
+          {
+            "id": "5490fd3b-481e-4f55-8895-35410cf90d57",
+            "role": "student",
+            "text": "They make agreement because hurt worse than doing hurt good for them. I think justice still matter. Person deserve fair even nobody reward. Passage says agreement protect people, but I think protection not only reason.",
+            "timestamp": "2026-11-05T15:44:22.627Z",
+            "phase": "eliciting",
+            "precedingSupportEventIds": [],
+            "tags": []
+          }
+        ],
+        "supportEvents": [],
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          },
+          {
+            "criterionId": "C2",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          },
+          {
+            "criterionId": "C3",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          }
+        ],
+        "probes": [],
+        "consecutiveRepairs": 0,
+        "review": null,
+        "revisions": [],
+        "attempts": [
+          {
+            "id": "5fd1d186-97aa-4f2b-bea1-bacabac91a74",
+            "purpose": "next",
+            "timestamp": "2026-11-05T15:44:23.646Z",
+            "latencyMs": 1018,
+            "model": "gemini-3.8-flash",
+            "usage": null,
+            "cost": null,
+            "rawOutput": {
+              "providerResponse": {
+                "error": {
+                  "code": 503,
+                  "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+                  "status": "UNAVAILABLE"
+                }
+              },
+              "httpStatus": 503,
+              "retryAfter": null,
+              "retryAfterSeconds": null
+            },
+            "error": "Gemini returned HTTP 503 (UNAVAILABLE). No learner message was delivered.",
+            "httpStatus": 503,
+            "errorCode": "UNAVAILABLE",
+            "retryAfterSeconds": null
+          }
+        ],
+        "fixtureIndex": 0,
+        "finalSkipped": false,
+        "error": "Gemini returned HTTP 503 (UNAVAILABLE). No learner message was delivered.",
+        "pending": {
+          "requestId": "ce322b89-adb9-4af9-b427-636cb5160319",
+          "turnId": "5490fd3b-481e-4f55-8895-35410cf90d57",
+          "purpose": "next"
+        },
+        "processedRequests": {},
+        "reflectionIds": []
+      },
+      "effectiveSupportContext": [
+        {
+          "turnId": "5490fd3b-481e-4f55-8895-35410cf90d57",
+          "supportEventIds": [],
+          "tags": []
+        }
+      ],
+      "limitations": [
+        "Not a validated assessment or English-proficiency test.",
+        "Category labels do not establish absence of leakage.",
+        "Text behavior cannot establish speech reliability.",
+        "Human corrections are separate from the frozen original review."
+      ]
+    },
+    {
+      "schemaVersion": "0.1",
+      "exportedAt": "2026-11-05T15:48:43.793Z",
+      "evidenceStatus": "Provisional model suggestions; human review required",
+      "session": {
+        "id": "c3ab05ff-8f89-4af8-9a21-33f89bca6fd4",
+        "taskId": "glaucon-justice-v1",
+        "taskVersion": "0.1",
+        "rubricVersion": "0.1",
+        "policyVersion": "0.1",
+        "condition": "policy",
+        "mode": "live",
+        "modelId": "gemini-3.8-flash",
+        "generationSettings": {
+          "provider": "Google Gemini",
+          "api": "generateContent v1beta",
+          "max_output_tokens": 5000,
+          "candidate_count": 1,
+          "response_mime_type": "application/json",
+          "structured_output": "responseJsonSchema; controller validation required",
+          "timeout_ms": 45000,
+          "temperature": "provider default (not explicitly set)",
+          "thinking": "provider default (not explicitly set)",
+          "automatic_retries": false,
+          "model_fallback": false,
+          "free_tier_verification": {
+            "verified": true,
+            "model": "gemini-3.8-flash",
+            "observed_at": "2026-11-05T15:44:11.396Z",
+            "project": "Default Gemini Project",
+            "maximum_age_hours": 24,
+            "scope": "Manual observation of project Free tier and exact model eligibility; not an immutable billing guarantee or API free-only switch.",
+            "quota_availability": "Not established by this verification; a request can still fail because of quota or rate limits."
+          }
+        },
+        "phase": "eliciting",
+        "createdAt": "2026-11-05T15:45:50.797Z",
+        "updatedAt": "2026-11-05T15:46:33.891Z",
+        "turns": [
+          {
+            "id": "44710431-23ed-4867-aea7-3dd0b78849b7",
+            "role": "student",
+            "text": "They make agreement because hurt worse than doing hurt good for them. I think justice still matter. Person deserve fair even nobody reward. Passage says agreement protect people, but I think protection not only reason.",
+            "timestamp": "2026-11-05T15:45:56.490Z",
+            "phase": "eliciting",
+            "precedingSupportEventIds": [],
+            "tags": []
+          }
+        ],
+        "supportEvents": [],
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          },
+          {
+            "criterionId": "C2",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          },
+          {
+            "criterionId": "C3",
+            "state": "not_yet_observed",
+            "studentTurnId": null,
+            "quote": "",
+            "explanation": "No substantive evidence has yet been recorded for this criterion.",
+            "unresolvedIssue": "Unobserved evidence is not a judgment of ability."
+          }
+        ],
+        "probes": [],
+        "consecutiveRepairs": 0,
+        "review": null,
+        "revisions": [],
+        "attempts": [
+          {
+            "id": "bc608076-a154-499f-965d-a0498d3f4962",
+            "purpose": "next",
+            "timestamp": "2026-11-05T15:46:33.891Z",
+            "latencyMs": 37400,
+            "model": "gemini-3.8-flash",
+            "usage": null,
+            "cost": null,
+            "rawOutput": {
+              "providerResponse": {
+                "error": {
+                  "code": 503,
+                  "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+                  "status": "UNAVAILABLE"
+                }
+              },
+              "httpStatus": 503,
+              "retryAfter": null,
+              "retryAfterSeconds": null
+            },
+            "error": "Gemini returned HTTP 503 (UNAVAILABLE). No learner message was delivered. Gemini is temporarily unavailable or under high demand. Your response is saved; try a manual retry later. No automatic retry or model fallback was performed.",
+            "httpStatus": 503,
+            "errorCode": "UNAVAILABLE",
+            "retryAfterSeconds": null
+          }
+        ],
+        "fixtureIndex": 0,
+        "finalSkipped": false,
+        "error": "Gemini returned HTTP 503 (UNAVAILABLE). No learner message was delivered. Gemini is temporarily unavailable or under high demand. Your response is saved; try a manual retry later. No automatic retry or model fallback was performed.",
+        "pending": {
+          "requestId": "f18e44c1-3e58-47d1-a9b2-1f07b2b1644b",
+          "turnId": "44710431-23ed-4867-aea7-3dd0b78849b7",
+          "purpose": "next"
+        },
+        "processedRequests": {},
+        "reflectionIds": []
+      },
+      "effectiveSupportContext": [
+        {
+          "turnId": "44710431-23ed-4867-aea7-3dd0b78849b7",
+          "supportEventIds": [],
+          "tags": []
+        }
+      ],
+      "limitations": [
+        "Not a validated assessment or English-proficiency test.",
+        "Category labels do not establish absence of leakage.",
+        "Text behavior cannot establish speech reliability.",
+        "Human corrections are separate from the frozen original review."
+      ]
+    }
+  ],
+  "summary": {
+    "generationAttempts": 2,
+    "successfulModelOutputs": 0,
+    "http503Failures": 2,
+    "baselineLiveRuns": 0,
+    "paidEvaluationRuns": 0,
+    "educatorReviews": 0,
+    "studentPilots": 0,
+    "billingChanges": 0,
+    "quotaAvailability": "not verified; provider unavailable"
+  }
+}

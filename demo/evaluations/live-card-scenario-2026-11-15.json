@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "0.1",
+  "exportedAt": "2026-11-15T15:30:55.790Z",
+  "evidenceStatus": "Provisional model suggestions; human review required",
+  "session": {
+    "id": "565155e9-106e-4e2e-b198-42874e98b87b",
+    "taskId": "glaucon-justice-v1",
+    "taskVersion": "0.1",
+    "rubricVersion": "0.1",
+    "policyVersion": "0.1",
+    "condition": "policy",
+    "mode": "live",
+    "modelId": "gemini-3.1-flash-lite",
+    "generationSettings": {
+      "provider": "Google Gemini",
+      "api": "generateContent v1beta",
+      "prompt_revision": "2026-11-05-contiguous-quotes",
+      "max_output_tokens": 5000,
+      "candidate_count": 1,
+      "response_mime_type": "application/json",
+      "structured_output": "responseJsonSchema; controller validation required",
+      "timeout_ms": 45000,
+      "temperature": "provider default (not explicitly set)",
+      "thinking": "provider default (not explicitly set)",
+      "automatic_retries": false,
+      "model_fallback": false,
+      "free_tier_verification": {
+        "verified": true,
+        "model": "gemini-3.1-flash-lite",
+        "observed_at": "2026-11-05T15:53:18.188Z",
+        "project": "Default Gemini Project",
+        "source": "saved_operator_confirmation",
+        "scope": "Saved operator confirmation of project Free tier and exact model eligibility; not a fresh billing check or API free-only switch. Reconfirm after changing the project, key, model, or billing tier.",
+        "quota_availability": "Not established by this verification; a request can still fail because of quota or rate limits."
+      }
+    },
+    "phase": "eliciting",
+    "createdAt": "2026-11-15T15:28:59.407Z",
+    "updatedAt": "2026-11-15T15:29:32.765Z",
+    "turns": [
+      {
+        "id": "9fcc5d28-1020-4b6e-9fe4-f6e897513646",
+        "role": "student",
+        "text": "What is reputation?",
+        "timestamp": "2026-11-15T15:29:29.344Z",
+        "phase": "eliciting",
+        "precedingSupportEventIds": [],
+        "tags": [
+          "authored_evaluation_input"
+        ]
+      },
+      {
+        "id": "824201a5-e8bf-4556-a2fe-ec428c4e5b03",
+        "role": "assistant",
+        "text": "What other people think about a person.",
+        "timestamp": "2026-11-15T15:29:32.765Z",
+        "phase": "eliciting",
+        "actionId": "define_incidental",
+        "precedingSupportEventIds": [],
+        "tags": []
+      }
+    ],
+    "supportEvents": [
+      {
+        "id": "9610f346-12ab-422a-bcc5-c4c3f480e2ef",
+        "requestTurnId": "9fcc5d28-1020-4b6e-9fe4-f6e897513646",
+        "triggerTurnId": "9fcc5d28-1020-4b6e-9fe4-f6e897513646",
+        "actionId": "define_incidental",
+        "plannedCategory": "access",
+        "deliveredTurnId": "824201a5-e8bf-4556-a2fe-ec428c4e5b03",
+        "requested": true,
+        "delivered": true,
+        "status": "delivered",
+        "reviewerCategory": "unreviewed",
+        "reviewNote": ""
+      }
+    ],
+    "observations": [
+      {
+        "criterionId": "C1",
+        "state": "not_yet_observed",
+        "studentTurnId": null,
+        "quote": "",
+        "explanation": "no recorded support before this response",
+        "unresolvedIssue": "none"
+      },
+      {
+        "criterionId": "C2",
+        "state": "not_yet_observed",
+        "studentTurnId": null,
+        "quote": "",
+        "explanation": "no recorded support before this response",
+        "unresolvedIssue": "none"
+      },
+      {
+        "criterionId": "C3",
+        "state": "not_yet_observed",
+        "studentTurnId": null,
+        "quote": "",
+        "explanation": "no recorded support before this response",
+        "unresolvedIssue": "none"
+      }
+    ],
+    "probes": [],
+    "consecutiveRepairs": 0,
+    "review": null,
+    "revisions": [],
+    "attempts": [
+      {
+        "id": "1ee77937-5f64-4cff-87ff-59a6b84356f6",
+        "purpose": "next",
+        "timestamp": "2026-11-15T15:29:32.765Z",
+        "latencyMs": 3421,
+        "model": "gemini-3.1-flash-lite",
+        "usage": {
+          "promptTokenCount": 2238,
+          "candidatesTokenCount": 240,
+          "totalTokenCount": 2478,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 2238
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "cost": null,
+        "rawOutput": {
+          "candidates": [
+            {
+              "content": {
+                "parts": [
+                  {
+                    "text": "{\n  \"actionId\": \"define_incidental\",\n  \"termId\": \"reputation\",\n  \"observations\": [\n    {\n      \"criterionId\": \"C1\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"no recorded support before this response\",\n      \"unresolvedIssue\": \"none\"\n    },\n    {\n      \"criterionId\": \"C2\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"no recorded support before this response\",\n      \"unresolvedIssue\": \"none\"\n    },\n    {\n      \"criterionId\": \"C3\",\n      \"state\": \"not_yet_observed\",\n      \"studentTurnId\": null,\n      \"quote\": \"\",\n      \"explanation\": \"no recorded support before this response\",\n      \"unresolvedIssue\": \"none\"\n    }\n  ],\n  \"unresolvedQuestions\": []\n}",
+                    "thoughtSignature": "EnMKcQFpFH0TuhApIJQUOTAnDslYXPn1ayX0ZPtv347yJLMc0kA5eq88h7C726UeOKtvqkahtoSePnJ0P4PCyzfWpRgKCRGFKp9IKaHynFE/p0kos8+Y91uvLSsh2670/oHW2C86goKAc+VQFuY/xFWtZkwd"
+                  }
+                ],
+                "role": "model"
+              },
+              "finishReason": "STOP",
+              "index": 0
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 2238,
+            "candidatesTokenCount": 240,
+            "totalTokenCount": 2478,
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 2238
+              }
+            ],
+            "serviceTier": "standard"
+          },
+          "modelVersion": "gemini-3.1-flash-lite",
+          "responseId": "2c_5av71I9avytMP75yLoQQ"
+        },
+        "error": null
+      }
+    ],
+    "fixtureIndex": 0,
+    "finalSkipped": false,
+    "error": null,
+    "pending": null,
+    "processedRequests": {
+      "fdab0f4b-b972-4b33-91ec-a02f9bac682f:turn": "next"
+    },
+    "reflectionIds": [],
+    "responseFeedback": [],
+    "scenario": {
+      "caseId": "T06",
+      "title": "Requested incidental definition",
+      "studentText": "What is reputation?",
+      "operation": "turn",
+      "runRequestId": "fdab0f4b-b972-4b33-91ec-a02f9bac682f"
+    }
+  },
+  "effectiveSupportContext": [
+    {
+      "turnId": "9fcc5d28-1020-4b6e-9fe4-f6e897513646",
+      "supportEventIds": [],
+      "tags": [
+        "authored_evaluation_input"
+      ]
+    }
+  ],
+  "limitations": [
+    "Not a validated assessment or English-proficiency test.",
+    "Category labels do not establish absence of leakage.",
+    "Text behavior cannot establish speech reliability.",
+    "Human corrections are separate from the frozen original review."
+  ]
+}

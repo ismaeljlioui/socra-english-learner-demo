@@ -1,0 +1,15 @@
+# Local credentials and machine files
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+*.pem
+*.key
+
+# Dependencies and generated output
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/

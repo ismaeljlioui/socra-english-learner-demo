@@ -1,0 +1,103 @@
+{
+  "createdAt": "2026-11-20T18:43:52.963Z",
+  "model": "gemini-3.1-flash-lite",
+  "analysisRequests": 1,
+  "records": [
+    {
+      "id": "28791034-95db-40ad-84da-a4e4ed3b814c",
+      "sessionId": "8a533efe-85c4-47a2-867b-b64c671f66e5",
+      "requestId": "cad44c45-7256-4f15-b830-1229c376488d",
+      "target": {
+        "kind": "case",
+        "caseId": "C06",
+        "variant": "example"
+      },
+      "snapshot": {
+        "assignment": {
+          "id": "glaucon-justice-v1",
+          "version": "0.1",
+          "context": "Glaucon presents an account of justice for Socrates to examine. Distinguish that account from your own position. You do not need knowledge of the rest of the book.",
+          "question": "Would justice still matter morally if it brought no practical advantages, such as safety or a good reputation? Explain your position and relate it to the account in the passage.",
+          "passages": [
+            {
+              "id": "P1",
+              "text": "They say that to do injustice is, by nature, good; to suffer injustice, evil; but that the evil is greater than the good."
+            },
+            {
+              "id": "P2",
+              "text": "And so when men have both done and suffered injustice and have had experience of both, not being able to avoid the one and obtain the other, they think that they had better agree among themselves to have neither; hence there arise laws and mutual covenants; and that which is ordained by law is termed by them lawful and just."
+            }
+          ]
+        },
+        "turns": [
+          {
+            "id": "turn-1",
+            "role": "student",
+            "text": "In the passage, they make the agreement so they can do more injustice to other people.",
+            "phase": "authored transcript",
+            "timestamp": null
+          }
+        ],
+        "assistance": [],
+        "inputFacts": [
+          "Text only; no audio or speech-recognition evidence.",
+          "Only the supplied recorded turns are available; no follow-up elicitation."
+        ]
+      },
+      "fingerprint": "fd0632ce67da204179d69f2dd5bf8771caab7aa8e110e7831a910fb6e24b0777",
+      "contextAtRequest": {
+        "state": "Illinois",
+        "framework": "WIDA",
+        "writing": 2,
+        "reading": null
+      },
+      "requestedAt": "2026-11-20T18:43:52.974Z",
+      "completedAt": "2026-11-20T18:43:55.002Z",
+      "state": "failed",
+      "observations": [],
+      "decisions": [],
+      "error": "Gemini returned HTTP 400 (INVALID_ARGUMENT). No learner message was delivered. Check the server's API key, model access and request configuration.",
+      "httpStatus": 400,
+      "model": "gemini-3.1-flash-lite",
+      "promptVersion": "language-observations-2026-11-20-v1",
+      "rawOutput": {
+        "providerResponse": {
+          "error": {
+            "code": 400,
+            "message": "The specified schema produces a constraint that has too many states for serving. Typical causes of this error are schemas with lots of text (for example, very long property or enum names), schemas with long array length limits (especially when nested), or schemas using complex value matchers (for example, integers or numbers with minimum/maximum bounds or strings with complex formats like date-time)",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "httpStatus": 400,
+        "retryAfter": null,
+        "retryAfterSeconds": null
+      },
+      "usage": null,
+      "latencyMs": 2028,
+      "inputStatus": null,
+      "changed": false
+    }
+  ],
+  "stopReason": "Gemini returned HTTP 400 (INVALID_ARGUMENT). No learner message was delivered. Check the server's API key, model access and request configuration.",
+  "notice": "Bounded plan of three synthetic smoke requests. Stopped after the first HTTP 400 configuration failure. No retries or model substitution; this is not student validation.",
+  "sessionId": "8a533efe-85c4-47a2-867b-b64c671f66e5",
+  "url": "http://127.0.0.1:4317/?session=8a533efe-85c4-47a2-867b-b64c671f66e5",
+  "plannedChecks": [
+    {
+      "case": "C06 example",
+      "purpose": "clear source mismatch",
+      "execution": "failed: schema complexity rejected before observations"
+    },
+    {
+      "case": "C06 comparison",
+      "purpose": "meaningful reasoning in imperfect English",
+      "execution": "not run after stop condition"
+    },
+    {
+      "case": "C10 example",
+      "purpose": "unresolved reference",
+      "execution": "not run after stop condition"
+    }
+  ],
+  "postRunChange": "Provider grammar simplified in prompt version v2; strict server validation retained. The changed grammar was checked offline only, with no second live request."
+}

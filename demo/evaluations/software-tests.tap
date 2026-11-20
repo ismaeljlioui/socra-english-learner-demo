@@ -1,0 +1,479 @@
+
+> humanities-language-support-demo@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: all assistance controls record exact requests, delivered help and cumulative provenance without probe costs
+ok 1 - all assistance controls record exact requests, delivered help and cumulative provenance without probe costs
+  ---
+  duration_ms: 2.861083
+  ...
+# Subtest: every live assistance shortcut uses the model path equally in baseline and policy
+ok 2 - every live assistance shortcut uses the model path equally in baseline and policy
+  ---
+  duration_ms: 7.305083
+  ...
+# Subtest: request IDs matching object properties still execute once
+ok 3 - request IDs matching object properties still execute once
+  ---
+  duration_ms: 0.122916
+  ...
+# Subtest: assistance controls cannot force probes, supply definitions or bypass phase boundaries
+ok 4 - assistance controls cannot force probes, supply definitions or bypass phase boundaries
+  ---
+  duration_ms: 0.293959
+  ...
+# Subtest: response feedback is idempotent, removable, exported and separate from frozen evidence
+ok 5 - response feedback is idempotent, removable, exported and separate from frozen evidence
+  ---
+  duration_ms: 0.845542
+  ...
+# Subtest: response feedback rejects invented turns, student turns and arbitrary payloads
+ok 6 - response feedback rejects invented turns, student turns and arbitrary payloads
+  ---
+  duration_ms: 1.420083
+  ...
+# Subtest: D1: full scripted path preserves exact evidence, support ledger, and optional final skip
+ok 7 - D1: full scripted path preserves exact evidence, support ledger, and optional final skip
+  ---
+  duration_ms: 0.504958
+  ...
+# Subtest: D2: full scripted path preserves exact evidence, support ledger, and optional final skip
+ok 8 - D2: full scripted path preserves exact evidence, support ledger, and optional final skip
+  ---
+  duration_ms: 0.390417
+  ...
+# Subtest: D3: full scripted path preserves exact evidence, support ledger, and optional final skip
+ok 9 - D3: full scripted path preserves exact evidence, support ledger, and optional final skip
+  ---
+  duration_ms: 0.538917
+  ...
+# Subtest: D4: full scripted path preserves exact evidence, support ledger, and optional final skip
+ok 10 - D4: full scripted path preserves exact evidence, support ledger, and optional final skip
+  ---
+  duration_ms: 0.540917
+  ...
+# Subtest: D5: full scripted path preserves exact evidence, support ledger, and optional final skip
+ok 11 - D5: full scripted path preserves exact evidence, support ledger, and optional final skip
+  ---
+  duration_ms: 0.356125
+  ...
+# Subtest: D6: full scripted path preserves exact evidence, support ledger, and optional final skip
+ok 12 - D6: full scripted path preserves exact evidence, support ledger, and optional final skip
+  ---
+  duration_ms: 0.436709
+  ...
+# Subtest: D3: first substantive response retains requested access support
+ok 13 - D3: first substantive response retains requested access support
+  ---
+  duration_ms: 0.266
+  ...
+# Subtest: D2: initial source conflict and explicit revision survive together
+ok 14 - D2: initial source conflict and explicit revision survive together
+  ---
+  duration_ms: 0.260791
+  ...
+# Subtest: D5: unmet concept request and absence of substantive evidence remain explicit
+ok 15 - D5: unmet concept request and absence of substantive evidence remain explicit
+  ---
+  duration_ms: 0.857792
+  ...
+# Subtest: unknown actions, extra payloads, invalid glossary terms, and missing fields are rejected
+ok 16 - unknown actions, extra payloads, invalid glossary terms, and missing fields are rejected
+  ---
+  duration_ms: 0.471666
+  ...
+# Subtest: assistant citations, invented quotes, omitted criteria, and post-help citations are rejected
+ok 17 - assistant citations, invented quotes, omitted criteria, and post-help citations are rejected
+  ---
+  duration_ms: 0.175125
+  ...
+# Subtest: moral disagreement cannot be labeled a textual contradiction
+ok 18 - moral disagreement cannot be labeled a textual contradiction
+  ---
+  duration_ms: 0.062542
+  ...
+# Subtest: injection in a student turn does not interpolate into policy output
+ok 19 - injection in a student turn does not interpolate into policy output
+  ---
+  duration_ms: 0.436291
+  ...
+# Subtest: explicit access requests precede probes and consume no budget
+ok 20 - explicit access requests precede probes and consume no budget
+  ---
+  duration_ms: 0.540791
+  ...
+# Subtest: policy: one probe per criterion, substantive eligibility, and three-probe total
+ok 21 - policy: one probe per criterion, substantive eligibility, and three-probe total
+  ---
+  duration_ms: 0.146209
+  ...
+# Subtest: baseline: one probe per criterion, substantive eligibility, and three-probe total
+ok 22 - baseline: one probe per criterion, substantive eligibility, and three-probe total
+  ---
+  duration_ms: 0.067166
+  ...
+# Subtest: policy resolves ambiguity before probing and enforces criterion order
+ok 23 - policy resolves ambiguity before probing and enforces criterion order
+  ---
+  duration_ms: 0.075958
+  ...
+# Subtest: two unsuccessful repairs lead to a voluntary finish invitation without a low state
+ok 24 - two unsuccessful repairs lead to a voluntary finish invitation without a low state
+  ---
+  duration_ms: 0.462583
+  ...
+# Subtest: blank input causes no turn, model call, or evidence inference; requested time is allowed
+ok 25 - blank input causes no turn, model call, or evidence inference; requested time is allowed
+  ---
+  duration_ms: 0.344167
+  ...
+# Subtest: provider failure retains the turn; retry and original request replay do not duplicate supports or probes
+ok 26 - provider failure retains the turn; retry and original request replay do not duplicate supports or probes
+  ---
+  duration_ms: 0.602583
+  ...
+# Subtest: replaying the successful retry request itself is idempotent
+ok 27 - replaying the successful retry request itself is idempotent
+  ---
+  duration_ms: 0.195292
+  ...
+# Subtest: concurrent mutations cannot duplicate the pending turn
+ok 28 - concurrent mutations cannot duplicate the pending turn
+  ---
+  duration_ms: 0.166
+  ...
+# Subtest: client phase, probe, condition, and rubric overrides are not authoritative
+ok 29 - client phase, probe, condition, and rubric overrides are not authoritative
+  ---
+  duration_ms: 0.144542
+  ...
+# Subtest: learning note and reflection leave the original pre-help report byte-for-byte unchanged
+ok 30 - learning note and reflection leave the original pre-help report byte-for-byte unchanged
+  ---
+  duration_ms: 0.207167
+  ...
+# Subtest: custom fixture final response is retained without invented interpretation
+ok 31 - custom fixture final response is retained without invented interpretation
+  ---
+  duration_ms: 0.170166
+  ...
+# Subtest: reviewer content-help correction retains cumulative provenance after a neutral prompt
+ok 32 - reviewer content-help correction retains cumulative provenance after a neutral prompt
+  ---
+  duration_ms: 0.477167
+  ...
+# Subtest: fixture arbitrary input, baseline fixtures, and absent live configuration fail explicitly
+ok 33 - fixture arbitrary input, baseline fixtures, and absent live configuration fail explicitly
+  ---
+  duration_ms: 0.099417
+  ...
+# Subtest: condition changes and resets create distinct, empty sessions
+ok 34 - condition changes and resets create distinct, empty sessions
+  ---
+  duration_ms: 0.166083
+  ...
+# Subtest: premature finalization and evidence beyond a frozen cutoff are rejected
+ok 35 - premature finalization and evidence beyond a frozen cutoff are rejected
+  ---
+  duration_ms: 0.073125
+  ...
+# Subtest: typed Finish and equivalent explicit commands bypass the model and preserve the exact request
+ok 36 - typed Finish and equivalent explicit commands bypass the model and preserve the exact request
+  ---
+  duration_ms: 0.147208
+  ...
+# Subtest: a failed final model review can be retained explicitly unreviewed before opening learning
+ok 37 - a failed final model review can be retained explicitly unreviewed before opening learning
+  ---
+  duration_ms: 0.377042
+  ...
+# Subtest: keep_unreviewed cannot fabricate a completed record in other phases
+ok 38 - keep_unreviewed cannot fabricate a completed record in other phases
+  ---
+  duration_ms: 0.171333
+  ...
+# Subtest: support ledger distinguishes unsolicited probe trigger from an actual support request
+ok 39 - support ledger distinguishes unsolicited probe trigger from an actual support request
+  ---
+  duration_ms: 0.261875
+  ...
+# Subtest: all 17 authored cases form a zero-call plan with three repeats and both conditions
+ok 40 - all 17 authored cases form a zero-call plan with three repeats and both conditions
+  ---
+  duration_ms: 1.430125
+  ...
+# Subtest: invalid case IDs and insufficient or nonintegral repeat counts cannot start evaluation
+ok 41 - invalid case IDs and insufficient or nonintegral repeat counts cannot start evaluation
+  ---
+  duration_ms: 0.424875
+  ...
+# Subtest: actual evaluation requires configured live mode and never substitutes fixtures
+ok 42 - actual evaluation requires configured live mode and never substitutes fixtures
+  ---
+  duration_ms: 0.066708
+  ...
+# Subtest: T06 creates six independent same-model calls, three per condition, with unset human findings
+ok 43 - T06 creates six independent same-model calls, three per condition, with unset human findings
+  ---
+  duration_ms: 5.349042
+  ...
+# Subtest: failed runs remain in the denominator with errors and no fabricated success output
+ok 44 - failed runs remain in the denominator with errors and no fabricated success output
+  ---
+  duration_ms: 1.056042
+  ...
+# Subtest: a Gemini quota failure stops the batch and preserves attempted versus unattempted counts
+ok 45 - a Gemini quota failure stops the batch and preserves attempted versus unattempted counts
+  ---
+  duration_ms: 0.219625
+  ...
+# Subtest: generated but rejected evidence counts as a model output, never a delivered answer or provider HTTP error
+ok 46 - generated but rejected evidence counts as a model output, never a delivered answer or provider HTTP error
+  ---
+  duration_ms: 1.901375
+  ...
+# Subtest: T13 rejects blank input without an extra model call before the wait request
+ok 47 - T13 rejects blank input without an extra model call before the wait request
+  ---
+  duration_ms: 1.855208
+  ...
+# Subtest: T15 carries deliberately injected content assistance through a later neutral prompt
+ok 48 - T15 carries deliberately injected content assistance through a later neutral prompt
+  ---
+  duration_ms: 1.251
+  ...
+# Subtest: T14 exports actual model evidence review separately from the fixed server finish transition
+ok 49 - T14 exports actual model evidence review separately from the fixed server finish transition
+  ---
+  duration_ms: 1.76825
+  ...
+# Subtest: all 17 selectable scenarios prepare isolated, labeled prefixes without model calls
+ok 50 - all 17 selectable scenarios prepare isolated, labeled prefixes without model calls
+  ---
+  duration_ms: 0.331791
+  ...
+# Subtest: a single scenario runs once and replayed network requests do not duplicate calls or turns
+ok 51 - a single scenario runs once and replayed network requests do not duplicate calls or turns
+  ---
+  duration_ms: 0.306875
+  ...
+# Subtest: single scenario runs preserve identical model settings for both conditions
+ok 52 - single scenario runs preserve identical model settings for both conditions
+  ---
+  duration_ms: 0.269125
+  ...
+# Subtest: single T13 rejects blank before one wait request; T14 makes only a review call
+ok 53 - single T13 rejects blank before one wait request; T14 makes only a review call
+  ---
+  duration_ms: 0.294667
+  ...
+# Subtest: single T15 preserves the authored failure and cumulative support; no fabricated rating
+ok 54 - single T15 preserves the authored failure and cumulative support; no fabricated rating
+  ---
+  duration_ms: 0.1735
+  ...
+# Subtest: scenario quota failure stays visible and replay does not retry or fall back
+ok 55 - scenario quota failure stays visible and replay does not retry or fall back
+  ---
+  duration_ms: 0.127208
+  ...
+# Subtest: exact contiguous student/source provenance rejects invented, stitched and guide-attributed quotations
+ok 56 - exact contiguous student/source provenance rejects invented, stitched and guide-attributed quotations
+  ---
+  duration_ms: 3.511209
+  ...
+# Subtest: C02 accepts exact question evidence; C15 cannot be promoted to a reasoning difficulty
+ok 57 - C02 accepts exact question evidence; C15 cannot be promoted to a reasoning difficulty
+  ---
+  duration_ms: 0.783959
+  ...
+# Subtest: blank/missing student text produces input status without a provider call or conversation mutation
+ok 58 - blank/missing student text produces input status without a provider call or conversation mutation
+  ---
+  duration_ms: 0.7975
+  ...
+# Subtest: all five category example/comparison snapshots omit authored guidance, case labels, and the other variant
+ok 59 - all five category example/comparison snapshots omit authored guidance, case labels, and the other variant
+  ---
+  duration_ms: 1.009584
+  ...
+# Subtest: proficiency changes make no detector calls, do not change findings, and retain historical context
+ok 60 - proficiency changes make no detector calls, do not change findings, and retain historical context
+  ---
+  duration_ms: 3.188417
+  ...
+# Subtest: duplicate clicks, replay and pending case switches stay bound to their snapshots without follow-ups
+ok 61 - duplicate clicks, replay and pending case switches stay bound to their snapshots without follow-ups
+  ---
+  duration_ms: 1.661334
+  ...
+# Subtest: conversation changes make earlier snapshots stale; input/provider failure is not a learner finding
+ok 62 - conversation changes make earlier snapshots stale; input/provider failure is not a learner finding
+  ---
+  duration_ms: 1.705917
+  ...
+# Subtest: teacher decisions are separate, idempotent, session-bound and specific to one analysis
+ok 63 - teacher decisions are separate, idempotent, session-bound and specific to one analysis
+  ---
+  duration_ms: 3.380167
+  ...
+# Subtest: repairs must cite separate later student evidence and cannot remain marked current
+ok 64 - repairs must cite separate later student evidence and cannot remain marked current
+  ---
+  duration_ms: 0.566583
+  ...
+# Subtest: safeguard fixtures preserve imperfect English, corrections, prior help, and unresolved ambiguity without guidance leakage
+ok 65 - safeguard fixtures preserve imperfect English, corrections, prior help, and unresolved ambiguity without guidance leakage
+  ---
+  duration_ms: 0.40975
+  ...
+# Subtest: settings and all supported examples retain task and detector instructions; unsupported patterns are not run
+ok 66 - settings and all supported examples retain task and detector instructions; unsupported patterns are not run
+  ---
+  duration_ms: 0.132667
+  ...
+# Subtest: passage mismatch requires passage provenance; omitted later student context is rejected
+ok 67 - passage mismatch requires passage provenance; omitted later student context is rejected
+  ---
+  duration_ms: 0.234417
+  ...
+# Subtest: provider schema omits expensive length bounds while local validation retains them
+ok 68 - provider schema omits expensive length bounds while local validation retains them
+  ---
+  duration_ms: 0.23525
+  ...
+# Subtest: provider sends documented Gemini request with key only in header, JSON schema and default thinking
+ok 69 - provider sends documented Gemini request with key only in header, JSON schema and default thinking
+  ---
+  duration_ms: 12.591334
+  ...
+# Subtest: baseline and policy receive identical model, common source/rubric, transcript and generation settings
+ok 70 - baseline and policy receive identical model, common source/rubric, transcript and generation settings
+  ---
+  duration_ms: 2.416042
+  ...
+# Subtest: schema enumerates allowed actions and observations with no additional payload fields
+ok 71 - schema enumerates allowed actions and observations with no additional payload fields
+  ---
+  duration_ms: 0.153042
+  ...
+# Subtest: default Gemini model is exact and configurable without model substitution
+ok 72 - default Gemini model is exact and configurable without model substitution
+  ---
+  duration_ms: 0.893667
+  ...
+# Subtest: session model mismatch or absence rejects before fetch for next turns and reviews
+ok 73 - session model mismatch or absence rejects before fetch for next turns and reviews
+  ---
+  duration_ms: 0.718208
+  ...
+# Subtest: missing credentials, confirmation, invalid timestamp or wrong key/model binding prevent any fetch
+ok 74 - missing credentials, confirmation, invalid timestamp or wrong key/model binding prevent any fetch
+  ---
+  duration_ms: 0.845292
+  ...
+# Subtest: saved operator confirmation persists without pretending to be a fresh billing check
+ok 75 - saved operator confirmation persists without pretending to be a fresh billing check
+  ---
+  duration_ms: 0.846042
+  ...
+# Subtest: response feedback is excluded from generation and review context
+ok 76 - response feedback is excluded from generation and review context
+  ---
+  duration_ms: 0.122834
+  ...
+# Subtest: model path/query injection rejects before fetch even with matching verification
+ok 77 - model path/query injection rejects before fetch even with matching verification
+  ---
+  duration_ms: 0.316208
+  ...
+# Subtest: HTTP invalid-key errors redact provider values and property names without retry or fixture substitution
+ok 78 - HTTP invalid-key errors redact provider values and property names without retry or fixture substitution
+  ---
+  duration_ms: 0.791542
+  ...
+# Subtest: 429 zero free-tier quota is explicit and retains sanitized metrics/limits and retry metadata
+ok 79 - 429 zero free-tier quota is explicit and retains sanitized metrics/limits and retry metadata
+  ---
+  duration_ms: 2.661167
+  ...
+# Subtest: 429 daily quota differs from short cooldown and unknown quota
+ok 80 - 429 daily quota differs from short cooldown and unknown quota
+  ---
+  duration_ms: 0.837167
+  ...
+# Subtest: Retry-After HTTP date and structured RetryInfo duration are retained
+ok 81 - Retry-After HTTP date and structured RetryInfo duration are retained
+  ---
+  duration_ms: 0.249125
+  ...
+# Subtest: model 404 error does not select another model or retry
+ok 82 - model 404 error does not select another model or retry
+  ---
+  duration_ms: 0.17575
+  ...
+# Subtest: network failure never surfaces raw transport details or echoed API key
+ok 83 - network failure never surfaces raw transport details or echoed API key
+  ---
+  duration_ms: 0.24225
+  ...
+# Subtest: timeout aborts fetch and offers only manual retry
+ok 84 - timeout aborts fetch and offers only manual retry
+  ---
+  duration_ms: 4.538875
+  ...
+# Subtest: incomplete, refusal and prompt-blocked results retain safe raw and usage without learner output
+ok 85 - incomplete, refusal and prompt-blocked results retain safe raw and usage without learner output
+  ---
+  duration_ms: 3.27875
+  ...
+# Subtest: different or missing returned model fails while exact model and numeric versions pass
+ok 86 - different or missing returned model fails while exact model and numeric versions pass
+  ---
+  duration_ms: 1.540542
+  ...
+# Subtest: all non-thought text parts form one JSON document; malformed or duplicate documents fail
+ok 87 - all non-thought text parts form one JSON document; malformed or duplicate documents fail
+  ---
+  duration_ms: 0.842209
+  ...
+# Subtest: malformed envelopes, absent answer, extra candidates and unsupported parts reject
+ok 88 - malformed envelopes, absent answer, extra candidates and unsupported parts reject
+  ---
+  duration_ms: 1.834459
+  ...
+# Subtest: success and failure raw/usage/proposal fields redact exact key before storage
+ok 89 - success and failure raw/usage/proposal fields redact exact key before storage
+  ---
+  duration_ms: 0.363625
+  ...
+# Subtest: parseable untrusted schema violations go to controller validation without repair
+ok 90 - parseable untrusted schema violations go to controller validation without repair
+  ---
+  duration_ms: 0.141417
+  ...
+# Subtest: student injection stays in user-role data, with verbatim meaning preserved
+ok 91 - student injection stays in user-role data, with verbatim meaning preserved
+  ---
+  duration_ms: 0.081334
+  ...
+# Subtest: review context freezes transcript and support ledger before learning note and reflection
+ok 92 - review context freezes transcript and support ledger before learning note and reflection
+  ---
+  duration_ms: 0.127791
+  ...
+# Subtest: unknown frozen cutoff and oversized context fail without truncating or calling provider
+ok 93 - unknown frozen cutoff and oversized context fail without truncating or calling provider
+  ---
+  duration_ms: 0.410292
+  ...
+1..93
+# tests 93
+# suites 0
+# pass 93
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 241.899917

@@ -1,0 +1,461 @@
+[
+  {
+    "id": "D1",
+    "title": "Relevant reasoning in limited English",
+    "description": "Authored example: relevant evidence can appear without polished grammar. This is not a language-level classification.",
+    "steps": [
+      {
+        "studentText": "They make agreement because hurt worse than doing hurt good for them. I think justice still matter. Person deserve fair even nobody reward. Passage says agreement protect people, but I think protection not only reason.",
+        "actionId": "offer_finish",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "They make agreement because hurt worse than doing hurt good for them.",
+            "explanation": "The student explains the relation between the harm of suffering injustice and the agreement.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C2",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "I think justice still matter. Person deserve fair even nobody reward.",
+            "explanation": "The student states that justice matters without reward and gives fair treatment as a reason.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "Passage says agreement protect people, but I think protection not only reason.",
+            "explanation": "The student distinguishes the account’s protective benefit from their own reason for valuing justice.",
+            "unresolvedIssue": ""
+          }
+        ]
+      }
+    ],
+    "reviewNotes": [
+      "Scripted example — not live AI. Evidence interpretations are authored and provisional.",
+      "The authored final instruction is “Use what I said.” Choose Use earlier responses to preserve the earlier student words.",
+      "Use “no recorded support before this response”; do not infer independent mastery or a WIDA level.",
+      "The moral stance is not privileged over the competing stance in T03."
+    ]
+  },
+  {
+    "id": "D2",
+    "title": "Fluent prose with a textual misconception",
+    "description": "Authored example: separate a source misconception from the student’s substantive moral reason, then preserve an explicit revision.",
+    "steps": [
+      {
+        "studentText": "Glaucon's account establishes that people embrace justice solely because they regard it as intrinsically noble. I agree that its value survives any loss of practical benefits, because respecting another person has worth in itself.",
+        "actionId": "probe_source",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "contradicted_by_response",
+            "studentStep": 0,
+            "quote": "people embrace justice solely because they regard it as intrinsically noble",
+            "explanation": "This description conflicts with the supplied account of agreement in response to suffering injustice; it does not make the student’s separate moral position wrong.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C2",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "I agree that its value survives any loss of practical benefits, because respecting another person has worth in itself.",
+            "explanation": "The student states a position on the hypothetical and a reason in their own voice.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "partial",
+            "studentStep": 0,
+            "quote": "I agree that its value survives any loss of practical benefits",
+            "explanation": "The student signals agreement, but the source account to which they connect is misdescribed.",
+            "unresolvedIssue": "An accurate source connection is not established in this turn."
+          }
+        ]
+      },
+      {
+        "studentText": "They agree not to do injustice because they cannot avoid suffering it. I described that wrong before. I still think respect matters separately.",
+        "actionId": "offer_finish",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "contradicted_by_response",
+            "studentStep": 0,
+            "quote": "people embrace justice solely because they regard it as intrinsically noble",
+            "explanation": "This description conflicts with the supplied account of agreement in response to suffering injustice; it does not make the student’s separate moral position wrong.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C2",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "I agree that its value survives any loss of practical benefits, because respecting another person has worth in itself.",
+            "explanation": "The student states a position on the hypothetical and a reason in their own voice.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "partial",
+            "studentStep": 0,
+            "quote": "I agree that its value survives any loss of practical benefits",
+            "explanation": "The student signals agreement, but the source account to which they connect is misdescribed.",
+            "unresolvedIssue": "An accurate source connection is not established in this turn."
+          },
+          {
+            "criterionId": "C1",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "They agree not to do injustice because they cannot avoid suffering it. I described that wrong before.",
+            "explanation": "The student explicitly revises the source account after a targeted probe. The earlier conflict remains in the record.",
+            "unresolvedIssue": "The revised account is concise; sufficiency is subject to educator review."
+          },
+          {
+            "criterionId": "C3",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "I still think respect matters separately.",
+            "explanation": "Read with the student’s earlier stated reason and the revised account, this separates their reason from the passage’s explanation.",
+            "unresolvedIssue": "The source-to-position connection is brief; this authored interpretation needs educator review."
+          }
+        ]
+      }
+    ],
+    "reviewNotes": [
+      "Scripted example — not live AI. Evidence interpretations are authored and provisional.",
+      "The initial textual conflict and the explicit revision both remain visible.",
+      "C1 revision follows a targeted probe. The separate reason from the initial response is not erased.",
+      "No global wrong-answer or general-ability label is warranted."
+    ]
+  },
+  {
+    "id": "D3",
+    "title": "Access before the first substantive response",
+    "description": "Authored example: a requested glossary definition precedes the first substantive answer and remains in its support context.",
+    "steps": [
+      {
+        "studentText": "What is reputation?",
+        "actionId": "define_incidental",
+        "termId": "reputation",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C2",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          }
+        ]
+      },
+      {
+        "studentText": "People agree so others not hurt them. I think justice matters because people should be treated fairly even if nobody knows. That is different from making the agreement just for protection.",
+        "actionId": "offer_finish",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "People agree so others not hurt them.",
+            "explanation": "The student links agreement to protection from suffering harm.",
+            "unresolvedIssue": "This condensed account does not state the full P1 tradeoff; educator review should assess sufficiency."
+          },
+          {
+            "criterionId": "C2",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "I think justice matters because people should be treated fairly even if nobody knows.",
+            "explanation": "The student states a position and fair treatment as its reason.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "That is different from making the agreement just for protection.",
+            "explanation": "The student explicitly distinguishes their reason from the protective explanation in the account.",
+            "unresolvedIssue": ""
+          }
+        ]
+      }
+    ],
+    "reviewNotes": [
+      "Scripted example — not live AI. Evidence interpretations are authored and provisional.",
+      "The first substantive answer follows access support. Do not label it completely unsupported.",
+      "The configured definition supplies no moral reason, but its planned access category does not certify no leakage.",
+      "Support use is not an automatic penalty."
+    ]
+  },
+  {
+    "id": "D4",
+    "title": "Ambiguity before interpretation",
+    "description": "Authored example: ask about unresolved meaning before attributing a stance or a textual contradiction.",
+    "steps": [
+      {
+        "studentText": "No not good itself they good for them.",
+        "actionId": "clarify_meaning",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "unclear",
+            "studentStep": 0,
+            "quote": "No not good itself they good for them.",
+            "explanation": "The reference of “they” and the negation are unresolved; no position is reconstructed from this sentence.",
+            "unresolvedIssue": "Meaning must be clarified before interpreting the account or stance."
+          },
+          {
+            "criterionId": "C2",
+            "state": "unclear",
+            "studentStep": 0,
+            "quote": "No not good itself they good for them.",
+            "explanation": "The reference of “they” and the negation are unresolved; no position is reconstructed from this sentence.",
+            "unresolvedIssue": "Meaning must be clarified before interpreting the account or stance."
+          },
+          {
+            "criterionId": "C3",
+            "state": "unclear",
+            "studentStep": 0,
+            "quote": "No not good itself they good for them.",
+            "explanation": "The reference of “they” and the negation are unresolved; no position is reconstructed from this sentence.",
+            "unresolvedIssue": "Meaning must be clarified before interpreting the account or stance."
+          }
+        ]
+      },
+      {
+        "studentText": "I mean the people in the passage agree for their own protection. My answer is different. Even without benefits, fairness itself matters because people deserve equal treatment.",
+        "actionId": "offer_finish",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "unclear",
+            "studentStep": 0,
+            "quote": "No not good itself they good for them.",
+            "explanation": "The reference of “they” and the negation are unresolved; no position is reconstructed from this sentence.",
+            "unresolvedIssue": "Meaning must be clarified before interpreting the account or stance."
+          },
+          {
+            "criterionId": "C2",
+            "state": "unclear",
+            "studentStep": 0,
+            "quote": "No not good itself they good for them.",
+            "explanation": "The reference of “they” and the negation are unresolved; no position is reconstructed from this sentence.",
+            "unresolvedIssue": "Meaning must be clarified before interpreting the account or stance."
+          },
+          {
+            "criterionId": "C3",
+            "state": "unclear",
+            "studentStep": 0,
+            "quote": "No not good itself they good for them.",
+            "explanation": "The reference of “they” and the negation are unresolved; no position is reconstructed from this sentence.",
+            "unresolvedIssue": "Meaning must be clarified before interpreting the account or stance."
+          },
+          {
+            "criterionId": "C1",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "I mean the people in the passage agree for their own protection.",
+            "explanation": "The later response identifies protection as the account’s reason for agreement.",
+            "unresolvedIssue": "The account is condensed; sufficiency is provisional."
+          },
+          {
+            "criterionId": "C2",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "Even without benefits, fairness itself matters because people deserve equal treatment.",
+            "explanation": "The student gives a clear stance and reason after meaning repair.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "I mean the people in the passage agree for their own protection. My answer is different.",
+            "explanation": "The later response separates the source account from the student’s position, developed in the following sentence.",
+            "unresolvedIssue": "Do not assert whether this is a change of view rather than clarification; the initial meaning was unresolved."
+          }
+        ]
+      }
+    ],
+    "reviewNotes": [
+      "Scripted example — not live AI. Evidence interpretations are authored and provisional.",
+      "Retain the initial ambiguity instead of retroactively inventing its meaning.",
+      "The later response follows meaning repair. Do not claim the first sentence already expressed the later argument.",
+      "These text examples do not test speech recognition or spoken turn-taking."
+    ]
+  },
+  {
+    "id": "D5",
+    "title": "Answer-seeking and a support boundary",
+    "description": "Authored example: a narrow glossary leaves a conceptual request unmet. Finishing and a separate learning note remain available.",
+    "steps": [
+      {
+        "studentText": "What should I say? Just write the best answer.",
+        "actionId": "invite_attempt",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C2",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          }
+        ]
+      },
+      {
+        "studentText": "Then tell me what moral worth means.",
+        "actionId": "content_help_deferred",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C2",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "not_yet_observed",
+            "studentStep": -1,
+            "quote": "",
+            "explanation": "No substantive response for this criterion has been observed.",
+            "unresolvedIssue": ""
+          }
+        ]
+      }
+    ],
+    "reviewNotes": [
+      "Scripted example — not live AI. Evidence interpretations are authored and provisional.",
+      "Choose Finish, then Use earlier responses. No substantive assessment evidence is observed; this does not establish inability.",
+      "The concept-help request remains unmet. The learning note may not fully explain “moral worth”; this is a prototype limitation.",
+      "Open the learning note only after the pre-help record is frozen. Any reflection remains post-content-assistance material.",
+      "This blocked interaction is not proof of successful teaching or successful language access."
+    ],
+    "suggestedReflection": "After the learning note, I want to think more about whether justice can matter for reasons beyond benefits."
+  },
+  {
+    "id": "D6",
+    "title": "Connecting account and position",
+    "description": "Authored example: a focused connection probe invites the relationship without supplying the student’s conclusion.",
+    "steps": [
+      {
+        "studentText": "The passage says people make an agreement because suffering injustice is worse for them. I think justice matters even without those benefits, because people should not be used merely for someone else's gain.",
+        "actionId": "probe_connection",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "The passage says people make an agreement because suffering injustice is worse for them.",
+            "explanation": "The student relates suffering injustice to the agreement in the passage.",
+            "unresolvedIssue": "This is a condensed account; educator review should determine whether its detail is sufficient."
+          },
+          {
+            "criterionId": "C2",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "I think justice matters even without those benefits, because people should not be used merely for someone else's gain.",
+            "explanation": "The student offers a stance and a separate reason.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "partial",
+            "studentStep": 0,
+            "quote": "I think justice matters even without those benefits",
+            "explanation": "The response gestures toward the source’s benefits, but does not yet explain the relationship explicitly.",
+            "unresolvedIssue": "An explicit source-to-position connection is still requested by this authored scenario."
+          }
+        ]
+      },
+      {
+        "studentText": "The agreement is explained by what people gain from it. My reason is about how people should be treated, even when nobody gains.",
+        "actionId": "offer_finish",
+        "observations": [
+          {
+            "criterionId": "C1",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "The passage says people make an agreement because suffering injustice is worse for them.",
+            "explanation": "The student relates suffering injustice to the agreement in the passage.",
+            "unresolvedIssue": "This is a condensed account; educator review should determine whether its detail is sufficient."
+          },
+          {
+            "criterionId": "C2",
+            "state": "evidence_present",
+            "studentStep": 0,
+            "quote": "I think justice matters even without those benefits, because people should not be used merely for someone else's gain.",
+            "explanation": "The student offers a stance and a separate reason.",
+            "unresolvedIssue": ""
+          },
+          {
+            "criterionId": "C3",
+            "state": "partial",
+            "studentStep": 0,
+            "quote": "I think justice matters even without those benefits",
+            "explanation": "The response gestures toward the source’s benefits, but does not yet explain the relationship explicitly.",
+            "unresolvedIssue": "An explicit source-to-position connection is still requested by this authored scenario."
+          },
+          {
+            "criterionId": "C3",
+            "state": "evidence_present",
+            "studentStep": 1,
+            "quote": "The agreement is explained by what people gain from it. My reason is about how people should be treated, even when nobody gains.",
+            "explanation": "The student explains the contrast between an agreement based on gain and a reason about treatment independent of gain.",
+            "unresolvedIssue": "This explicit link follows a targeted connection probe."
+          }
+        ]
+      }
+    ],
+    "reviewNotes": [
+      "Scripted example — not live AI. Evidence interpretations are authored and provisional.",
+      "C1 and C2 precede the targeted probe; the explicit C3 link follows it.",
+      "Do not require named philosophers or specialist vocabulary absent from the task.",
+      "The rubric interpretation is a proposed design for educator review, not an observed model outcome."
+    ]
+  }
+]

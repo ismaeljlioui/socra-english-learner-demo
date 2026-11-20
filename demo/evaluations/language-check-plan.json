@@ -1,0 +1,240 @@
+{
+  "notice": "Authored review expectations, not evaluation results. Guidance is never supplied to the detector.",
+  "checks": [
+    {
+      "id": "C02",
+      "variant": "example",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "Practical advantages means being skilled at practical jobs, so the question asks whether justice helps people build things."
+        }
+      ],
+      "authoredExpectation": "The response interprets practical advantages as practical job skills, which does not fit the benefits named in this question.",
+      "watchFor": "Asking for a definition is not itself a misconception. Do not reject another meaning when the context genuinely permits it.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C02",
+      "variant": "comparison",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "I understand practical advantages as useful benefits, like safety. I am not sure whether justice needs those benefits to matter."
+        }
+      ],
+      "authoredExpectation": "The phrase is understood in context. Uncertainty about the philosophical answer is not a vocabulary error.",
+      "watchFor": "Asking for a definition is not itself a misconception. Do not reject another meaning when the context genuinely permits it.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C06",
+      "variant": "example",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "In the passage, they make the agreement so they can do more injustice to other people."
+        }
+      ],
+      "authoredExpectation": "The response makes increased injustice the agreement's purpose. P2 describes an agreement to have neither doing nor suffering injustice.",
+      "watchFor": "A missing because does not mean a missing connection. A student's disagreement with the account is not a source-reading error.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C06",
+      "variant": "comparison",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "They make agreement because they no want get hurt. They agree not hurt each other."
+        }
+      ],
+      "authoredExpectation": "The response communicates the protective reason and mutual restraint despite grammatical differences.",
+      "watchFor": "A missing because does not mean a missing connection. A student's disagreement with the account is not a source-reading error.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C10",
+      "variant": "example",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "Glaucon and Socrates are the two people in the task context."
+        },
+        {
+          "role": "student",
+          "text": "He disagrees with him."
+        }
+      ],
+      "authoredExpectation": "The response does not establish which person disagrees or whose position is being described.",
+      "watchFor": "Read earlier turns before flagging a pronoun. Do not guess the intended referent or add an AI follow-up.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C10",
+      "variant": "comparison",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "Glaucon is the speaker I am discussing."
+        },
+        {
+          "role": "student",
+          "text": "He presents the account for Socrates to examine."
+        }
+      ],
+      "authoredExpectation": "The preceding sentence supplies Glaucon as the clear referent of he.",
+      "watchFor": "Read earlier turns before flagging a pronoun. Do not guess the intended referent or add an AI follow-up.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C11",
+      "variant": "example",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "My own view is that justice is morally valuable in itself, even without benefits."
+        },
+        {
+          "role": "student",
+          "text": "The passage says people choose justice only because it is morally valuable in itself, even without benefits. That is what its agreement is based on."
+        }
+      ],
+      "authoredExpectation": "The response attributes the student's intrinsic-value explanation to an account organized around the relative benefits and harms of injustice.",
+      "watchFor": "Do not assume Glaucon personally endorses every proposition he presents. Disagreement with the passage is allowed.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C11",
+      "variant": "comparison",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "The passage explains agreement through protection from harm. My own view is different: justice can matter even when it gives no benefits."
+        }
+      ],
+      "authoredExpectation": "The student's position is explicitly distinguished from the account.",
+      "watchFor": "Do not assume Glaucon personally endorses every proposition he presents. Disagreement with the passage is allowed.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C15",
+      "variant": "example",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "Justice matters. People make agreements."
+        }
+      ],
+      "authoredExpectation": "A position and a source-related statement are present, but their relationship has not been explained. This does not show that the student cannot reason.",
+      "watchFor": "Do not demand a particular connector or repeat a connection already expressed in earlier turns. The same missing evidence receives the same label at every WIDA level.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C15",
+      "variant": "comparison",
+      "kind": "category pair",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "The account explains agreement through its protective benefits. I think justice matters beyond those benefits because people deserve fair treatment even without a reward."
+        }
+      ],
+      "authoredExpectation": "The response makes the contrast between the account's benefits and the student's independent reason recoverable.",
+      "watchFor": "Do not demand a particular connector or repeat a connection already expressed in earlier turns. The same missing evidence receives the same label at every WIDA level.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    },
+    {
+      "id": "C19",
+      "variant": "example",
+      "kind": "safeguard",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "People makes agreement. They no want hurt each other. I think justice matter even no reward because people deserve fair treatment."
+        }
+      ],
+      "authoredExpectation": "The response communicates the agreement, a position, and a reason despite agreement and verb-form differences.",
+      "watchFor": "Do not equate grammatical accuracy with understanding, or correct dialect and informal chat automatically. Form feedback is separate from a meaning flag.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": false
+    },
+    {
+      "id": "C21",
+      "variant": "example",
+      "kind": "safeguard",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "They agree so everyone can do more injustice."
+        },
+        {
+          "role": "student",
+          "text": "I need to correct that. They agree to avoid doing and suffering injustice, not to encourage it."
+        }
+      ],
+      "authoredExpectation": "The learner explicitly repairs the earlier interpretation. Keep the history, but do not present the earlier error as their unresolved current view.",
+      "watchFor": "An explicit revision is not inconsistency to penalize. Separate self-repair from repetition of an explanation already supplied by the guide.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": false
+    },
+    {
+      "id": "C22",
+      "variant": "example",
+      "kind": "safeguard",
+      "transcript": [
+        {
+          "role": "assistant",
+          "text": "The account says they agree to avoid doing and suffering injustice.",
+          "assistance": "substantive"
+        },
+        {
+          "role": "student",
+          "text": "They agree to avoid doing and suffering injustice."
+        }
+      ],
+      "authoredExpectation": "The response follows the same explanation supplied by the guide. Record the assistance; it cannot alone establish an independent interpretation.",
+      "watchFor": "Wording overlap alone does not prove copying or lack of understanding. Check timing and preserve independent evidence given before assistance.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": false
+    },
+    {
+      "id": "C10",
+      "variant": "example",
+      "kind": "safeguard",
+      "transcript": [
+        {
+          "role": "student",
+          "text": "Glaucon and Socrates are the two people in the task context."
+        },
+        {
+          "role": "student",
+          "text": "He disagrees with him."
+        }
+      ],
+      "authoredExpectation": "The response does not establish which person disagrees or whose position is being described.",
+      "watchFor": "Read earlier turns before flagging a pronoun. Do not guess the intended referent or add an AI follow-up.",
+      "execution": "prepared, not run",
+      "liveCategoryImplemented": true
+    }
+  ]
+}

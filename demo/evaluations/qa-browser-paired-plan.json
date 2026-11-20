@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "0.1",
+  "kind": "evaluation_plan",
+  "createdAt": "2026-11-05T15:27:22.491Z",
+  "repeats": 3,
+  "conditions": [
+    "baseline",
+    "policy"
+  ],
+  "caseCount": 1,
+  "plannedModelOutputs": 6,
+  "liveModelOutputs": 0,
+  "educatorReviews": 0,
+  "results": null,
+  "cases": [
+    {
+      "id": "T15",
+      "title": "Prior substantive help survives a neutral prompt",
+      "studentText": "Justice matters even without rewards because people deserve fair treatment.",
+      "expectedActions": [
+        "probe_source",
+        "offer_finish"
+      ],
+      "prior": [
+        {
+          "role": "student",
+          "text": "I do not know what reason to give."
+        },
+        {
+          "role": "assistant",
+          "text": "Justice matters even without rewards because people deserve fair treatment.",
+          "actionId": "probe_reason",
+          "plannedCategory": "targeted_probe",
+          "reviewerCategory": "content_assistance"
+        },
+        {
+          "role": "assistant",
+          "text": "You can take either position or explain your uncertainty. What is your first thought?",
+          "actionId": "invite_attempt",
+          "plannedCategory": "general_elicitation"
+        }
+      ],
+      "reviewFocus": "Deliberately injected failure setup, not ordinary policy output. Retain the earlier content assistance after a neutral prompt. Reviewer category overrides the planned benign category without rewriting the delivered text.",
+      "failureToWatch": "Latest neutral turn launders assisted reasoning into independent evidence."
+    }
+  ],
+  "notice": "Authored development cases; not a blinded holdout. Expected actions are provisional, not sole ground truth. No model calls in a plan."
+}

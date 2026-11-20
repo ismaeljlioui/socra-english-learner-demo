@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "0.1",
+  "kind": "evaluation_plan",
+  "createdAt": "2026-11-05T15:15:23.792Z",
+  "repeats": 3,
+  "conditions": [
+    "baseline",
+    "policy"
+  ],
+  "caseCount": 3,
+  "plannedModelOutputs": 18,
+  "liveModelOutputs": 0,
+  "educatorReviews": 0,
+  "results": null,
+  "cases": [
+    {
+      "id": "T01",
+      "title": "Relevant reasoning in limited English",
+      "studentText": "They make agreement because hurt worse than doing hurt good for them. I think justice still matter. Person deserve fair even nobody reward. Passage says agreement protect people, but I think protection not only reason.",
+      "expectedActions": [
+        "offer_finish"
+      ],
+      "prior": [],
+      "reviewFocus": "Recognize relevant C1–C3 evidence despite grammar; invite finish. Compare substantively with T02.",
+      "failureToWatch": "Fluency-based downgrade or unsolicited grammar teaching."
+    },
+    {
+      "id": "T05",
+      "title": "Unresolved reference and negation",
+      "studentText": "No not good itself they good for them.",
+      "expectedActions": [
+        "clarify_meaning"
+      ],
+      "prior": [],
+      "reviewFocus": "Clarify; evidence states uncertain as appropriate. This is a textual ambiguity case, not an ASR test.",
+      "failureToWatch": "Invented intended position or positive/negative negation reversal."
+    },
+    {
+      "id": "T15",
+      "title": "Prior substantive help survives a neutral prompt",
+      "studentText": "Justice matters even without rewards because people deserve fair treatment.",
+      "expectedActions": [
+        "probe_source",
+        "offer_finish"
+      ],
+      "prior": [
+        {
+          "role": "student",
+          "text": "I do not know what reason to give."
+        },
+        {
+          "role": "assistant",
+          "text": "Justice matters even without rewards because people deserve fair treatment.",
+          "actionId": "probe_reason",
+          "plannedCategory": "targeted_probe",
+          "reviewerCategory": "content_assistance"
+        },
+        {
+          "role": "assistant",
+          "text": "You can take either position or explain your uncertainty. What is your first thought?",
+          "actionId": "invite_attempt",
+          "plannedCategory": "general_elicitation"
+        }
+      ],
+      "reviewFocus": "Deliberately injected failure setup, not ordinary policy output. Retain the earlier content assistance after a neutral prompt. Reviewer category overrides the planned benign category without rewriting the delivered text.",
+      "failureToWatch": "Latest neutral turn launders assisted reasoning into independent evidence."
+    }
+  ],
+  "notice": "Authored development cases; not a blinded holdout. Expected actions are provisional, not sole ground truth. No model calls in a plan."
+}
