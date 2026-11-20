@@ -75,6 +75,8 @@ export function validateLanguageOutput(raw:unknown, snapshot:LanguageSnapshot):L
 }
 export type DetectorAdapter = (request:{modelId:string|null;instructions:string;data:LanguageSnapshot;schema:unknown})=>Promise<ModelResult>;
 export class LanguageService {
+  private pending = new Map<string, Promise<void>>();
+  async waitFor(id: string) { await this.pending.get(id); }
   records = new Map<string,LanguageAnalysis>();
   requestRecords = new Map<string,string>();
   contexts = new Map<string,{value:StudentContext;revision:number}>();
@@ -101,7 +103,7 @@ export class LanguageService {
     const record:LanguageAnalysis = {id:randomUUID(),sessionId:session.id,requestId,target:structuredClone(target),snapshot,fingerprint:hash,contextAtRequest:structuredClone(contextSchema.parse(context)),requestedAt:new Date().toISOString(),completedAt:null,state:"analyzing",observations:[],decisions:[],error:null,httpStatus:null,model:this.modelId,promptVersion:PROMPT_VERSION,rawOutput:null,usage:null,latencyMs:0,inputStatus:null};
     this.records.set(record.id,record); this.requestRecords.set(requestKey,record.id);
     if (!snapshot.turns.some(t=>t.role==="student"&&t.text.trim())) { record.state="insufficient"; record.inputStatus="No student response text is available. No model call was made; no learner difficulty is inferred."; record.completedAt=new Date().toISOString(); return record; }
-    void this.run(record); return record;
+    this.pending.set(record.id, this.run(record).finally(() => this.pending.delete(record.id))); return record;
   }
   private async run(r:LanguageAnalysis) {
     const started=Date.now();

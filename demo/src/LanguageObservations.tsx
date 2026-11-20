@@ -2,10 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { languageCases } from "./language-cases";
 import { detectorCategories, languageStatusLabels, targetKey, type AnalysisTarget, type LanguageAnalysis, type LanguageObservation, type StudentContext } from "./language-analysis";
 import type { Session } from "./types";
-export async function languageAPI<T>(url:string,body?:unknown):Promise<T> {
-  const r=await fetch(url,body?{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)}:undefined);
-  const v=await r.json();if(!r.ok)throw new Error(v.error??"The local request failed.");return v;
-}
+import { api as languageAPI } from "./api";
+export { languageAPI };
 const level=(n:number|null)=>n===null?"Not provided":`Level ${n}`;
 function ObservationCard({o,record,onDecision,onEvidence}:{o:LanguageObservation;record:LanguageAnalysis;onDecision:(id:string,action:string,wording:string,note:string)=>Promise<void>;onEvidence:()=>void}) {
   const [editing,setEditing]=useState(false),[wording,setWording]=useState(o.explanation),[note,setNote]=useState(""),[saving,setSaving]=useState(false),[error,setError]=useState("");

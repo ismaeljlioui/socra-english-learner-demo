@@ -1752,3 +1752,5 @@ main.modern-chat { position:fixed; inset:72px 0 0; width:auto; max-width:none; p
 .studio-review-link { display:block; margin:auto; background:#fff; border-radius:24px; }
 @media(max-width:650px) { body:has(.modern-chat) .app-header { padding:0 14px; } .modern-chat .tabs { left:8px; right:8px; overflow-x:auto; white-space:nowrap; }.modern-chat .tabs button { padding:9px;font-size:11px; } .studio-context { top:132px; left:12px;right:12px;flex-wrap:wrap;gap:6px; } .studio-context>span { width:100%;text-align:center; } .studio-thread { top:202px;left:12px;right:12px;bottom:260px; } .studio-message { max-width:95%; } .studio-source-sheet { top:196px;right:12px;width:calc(100vw - 24px); } }
 @media(prefers-reduced-motion:reduce) { .reference-input * { transition:none!important; animation:none!important; } }
+
+.hosting-notice { position: relative; z-index: 1; margin: 8px auto; padding: 8px 16px; max-width: 860px; text-align: center; font-size: 12px; color: #354d43; }

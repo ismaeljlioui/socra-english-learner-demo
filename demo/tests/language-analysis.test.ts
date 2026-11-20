@@ -101,3 +101,14 @@ test("provider schema omits expensive length bounds while local validation retai
  assert.throws(()=>validateLanguageOutput({observations:[{...sample(),title:"x".repeat(121)}]},snap),/contract/);
  assert.throws(()=>validateLanguageOutput({observations:[{...sample(),studentSpans:[]}]},snap),/contract/);
 });
+
+test("hosted completion waits for the original pending detector run without another call", async () => {
+ let release!:(r:Awaited<ReturnType<DetectorAdapter>>)=>void,calls=0;
+ const service=new LanguageService(()=>{calls++;return new Promise(r=>{release=r;});},"mock-only"),s=session();
+ const record=service.start(s,{kind:"case",caseId:"C06",variant:"example"},"wait",defaultStudentContext);
+ let completed=false;const waiting=service.waitFor(record.id).then(()=>{completed=true;});
+ await nextTick();assert.equal(completed,false);
+ release({proposal:{observations:[]},rawOutput:{mock:true},model:"mock-only",usage:null});
+ await waiting;assert.equal(record.state,"none");assert.equal(calls,1);
+ await service.waitFor(record.id);assert.equal(calls,1);
+});

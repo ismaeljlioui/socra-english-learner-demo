@@ -11,6 +11,7 @@ import type {
 } from "./types";
 import { HumanitiesDashboard } from "./HumanitiesDashboard";
 import "./styles.css";
+import { api } from "./api";
 import { StudentContextSettings } from "./StudentContextSettings";
 import { LanguageObservations, languageAPI } from "./LanguageObservations";
 import { defaultStudentContext, type StudentContext, type AnalysisTarget } from "./language-analysis";
@@ -23,6 +24,8 @@ import "./prompt-utilities.css";
 
 type Config = {
   configured: boolean;
+  hosted: boolean;
+  sessionNotice: string | null;
   credentialsConfigured: boolean;
   freeTierVerified: boolean;
   configurationMessage: string | null;
@@ -32,24 +35,6 @@ type Config = {
 };
 const human = (text: string) => text.replaceAll("_", " ");
 const requestId = () => crypto.randomUUID();
-async function api<T>(url: string, body?: unknown): Promise<T> {
-  const response = await fetch(
-    url,
-    body
-      ? {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
-        }
-      : undefined,
-  );
-  const data = await response.json();
-  if (!response.ok)
-    throw Object.assign(new Error(data.error ?? "Request failed."), {
-      httpStatus: response.status,
-    });
-  return data;
-}
 function download(value: unknown, name: string) {
   const url = URL.createObjectURL(
     new Blob([JSON.stringify(value, null, 2)], { type: "application/json" }),
@@ -243,7 +228,7 @@ function App() {
       }
     } catch (e) {
       const status = (e as Error & { httpStatus?: number }).httpStatus;
-      if (!status || status === 409) setTransport(envelope);
+      if (!status || status === 409 || (e as Error & { transportFailure?: boolean }).transportFailure) setTransport(envelope);
       else setTransport(null);
       setError(
         !status
@@ -397,9 +382,12 @@ function App() {
           <div className="error-box" role="alert" ref={errorNotice} tabIndex={-1}>
             <strong>{error || session?.error}</strong>
             <p>
-              No scripted response is substituted for a live failure. Recorded
-              turns stay in the session.
+              No scripted response is substituted for a live failure. Existing
+              turns remain visible while this page stays open; server sessions are temporary.
             </p>
+            {!config && <button onClick={() => window.location.reload()}>Reload demo</button>}
+            {config && <button onClick={() => setControls(true)}>Open session settings</button>}
+            {session && <button onClick={() => download({session, notice: "Browser copy only; may omit server-side analysis records."}, `humanities-recovery-${session.id}.json`)}>Save visible conversation</button>}
             {transport && (
               <button
                 disabled={working}
@@ -422,6 +410,7 @@ function App() {
             )}
           </div>
         )}
+        {config?.sessionNotice && <p className="hosting-notice">{config.sessionNotice}</p>}
         {config && !session ? (
           <section className="live-setup-card" aria-label="Live AI setup">
             <span className="eyebrow">Live AI</span><h2>Let’s connect your conversation.</h2>
@@ -430,9 +419,7 @@ function App() {
             <p className="muted">Scripted walkthroughs are also available in session settings and are clearly labeled.</p>
           </section>
         ) : !config || !session ? (
-          <div className="loading" role="status">
-            Opening the local demo…
-          </div>
+          !error && <div className="loading" role="status">Opening the demo…</div>
         ) : (
           <div hidden={page!=="chat"}><ChatStudio visible={page==="chat"&&!controls} key={session.id} activeCase={activeCase} setActiveCase={c=>{setActiveCase(c);setCaseVariant("example");}} caseVariant={caseVariant} setCaseVariant={setCaseVariant} onAnalyze={()=>setPage("language")} session={session} draft={draft} setDraft={setDraft} busy={busy} responding={busy && ["turn", "retry", "finalize"].includes(activeOperation)} configured={config.configured} model={session.modelId ?? config.modelId ?? "Gemini"} source={<TaskPanel />} configure={() => setControls(true)} act={act} nextExample={!!next} showReview={() => setReviewOpen(true)} exportRecord={() => void exported()}/></div>
         )}

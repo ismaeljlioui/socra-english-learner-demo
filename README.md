@@ -31,9 +31,13 @@ For a local production build, run `npm run build` and then `npm start` from `dem
 
 Credentials are not included. For a new checkout, copy `demo/.env.example` to `demo/.env`, supply a Gemini key locally, and follow the [configuration and Free-tier verification instructions](demo/README.md#gemini-live-configuration). Do not overwrite an existing `.env`. The model remains configurable and identical across baseline and policy conditions. Never commit credentials or real student data.
 
+## Deploy on Vercel
+
+Import this repository with **Root Directory `demo`**. The included configuration deploys the Vite frontend and Node API together. Add Gemini configuration only as server-side environment variables, then redeploy. See the [hosting instructions and temporary-session limits](demo/README.md#vercel-deployment--2026-11-20). No persistent database or billing setup is included.
+
 ## Verification and limits
 
-The recorded software baseline is **93 passing offline tests** and a successful production build. Run `npm test` and `npm run build` from `demo/` to verify your checkout. Verified desktop/mobile screenshots and actual synthetic live outputs are linked in the [demo README](demo/README.md).
+The recorded software baseline is **97 passing offline tests** and a successful production build. Run `npm test` and `npm run build` from `demo/` to verify your checkout. Verified desktop/mobile screenshots and actual synthetic live outputs are linked in the [demo README](demo/README.md).
 
 The latest three synthetic detector checks completed after an initial schema rejection, but exposed overflagging and inappropriate uncertainty labels. Exact quotations do not prove correct interpretation. Authored expectations, mocked UI checks, and live model results remain distinct. These proposed categories are not official WIDA codes, diagnoses, or evidence of educational validity, fairness, or real-student performance. The Grades 9–12 task assumption is provisional; middle-school suitability remains unresolved.
 

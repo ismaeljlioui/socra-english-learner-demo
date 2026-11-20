@@ -30,3 +30,5 @@ evaluations/*
 !evaluations/qa-session-after-learning.json
 !evaluations/qa-session-before-learning.json
 !evaluations/software-tests.tap
+
+.vercel/

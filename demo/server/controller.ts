@@ -538,7 +538,7 @@ export class Controller {
   }
   get(sessionId: string) {
     const s = this.sessions.get(sessionId);
-    if (!s) throw new DemoError("Session not found. Start a new session.", 404);
+    if (!s) throw new DemoError("This temporary session is no longer available on the server. Open session settings to start a new one. Exported records remain on your device.", 404);
     return s;
   }
   async mutate(
