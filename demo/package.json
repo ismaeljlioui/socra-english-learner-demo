@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node --env-file-if-exists=.env --import tsx server/index.ts",
-    "build": "npm run build:input && tsc --noEmit && npm run check:server && vite build",
+    "build": "npm run prepare:hosted && npm run build:input && tsc --noEmit && npm run check:server && vite build",
     "start": "node --env-file-if-exists=.env --import tsx server/index.ts --production",
     "test": "node --import tsx --test tests/*.test.ts",
     "evaluate": "node --env-file-if-exists=.env --import tsx scripts/evaluate.ts",
@@ -14,7 +14,10 @@
     "predev": "npm run build:input",
     "check:language": "node --import tsx scripts/check-language.ts",
     "test:language-ui": "node --import tsx scripts/ui-language-fixture.ts",
-    "check:server": "tsc -p tsconfig.server.json && node scripts/check-server.mjs"
+    "check:server": "npm run prepare:hosted && tsc -p tsconfig.server.json && node scripts/check-server.mjs",
+    "prepare:hosted": "node scripts/prepare-hosted-key.mjs",
+    "pretest": "npm run prepare:hosted",
+    "postinstall": "node scripts/prepare-hosted-key.mjs"
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.3.0",

@@ -32,7 +32,15 @@ export function LanguageObservations({session,context,target,onTarget,openChat,c
   const [requestError,setRequestError]=useState("");
   const lock=useRef(false),evidenceRef=useRef<HTMLDivElement>(null);
   const key=targetKey(target),supported=target.kind==="conversation"||(detectorCategories as readonly string[]).includes(target.caseId);
-  useEffect(()=>{let active=true;const read=()=>languageAPI<{analyses:LanguageAnalysis[]}>(`/api/language?sessionId=${session.id}`).then(v=>{if(active){setRecords(v.analyses);setLoaded(true);setError("");}}).catch(e=>{if(active)setError(e.message);});void read();const timer=setInterval(()=>void read(),1500);return()=>{active=false;clearInterval(timer);};},[session.id]);
+  useEffect(()=>{
+    let active=true,timer:ReturnType<typeof setTimeout>;
+    const read=async()=>{
+      try {const v=await languageAPI<{analyses:LanguageAnalysis[]}>(`/api/language?sessionId=${session.id}`);if(active){setRecords(v.analyses);setLoaded(true);setError("");}}
+      catch(e){if(active)setError((e as Error).message);}
+      finally {if(active)timer=setTimeout(()=>void read(),1500);}
+    };
+    void read();return()=>{active=false;clearTimeout(timer);};
+  },[session.id]);
   useEffect(()=>{setFocus(null);setSelectedRun("");},[key]);
   useEffect(()=>{if(focus){const anchor=evidenceRef.current?.querySelector<HTMLElement>(".highlighted-evidence")??evidenceRef.current;anchor?.scrollIntoView({block:"center",behavior:"smooth"});anchor?.focus();}},[focus]);
   const runs=records.filter(r=>targetKey(r.target)===key),r=runs.find(r=>r.id===selectedRun)??runs.at(-1);

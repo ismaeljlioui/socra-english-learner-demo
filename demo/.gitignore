@@ -33,3 +33,4 @@ evaluations/*
 
 .vercel/
 .runtime-check/
+server/hosted-key.json

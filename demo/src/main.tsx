@@ -232,7 +232,7 @@ function App() {
       else setTransport(null);
       setError(
         !status
-          ? "The local server response was not received. Retry the same request to avoid duplicating a turn."
+          ? "The server response was not received. Your draft remains visible. Retrying may repeat a model request on hosted sessions."
           : (e as Error).message,
       );
     } finally {

@@ -37,7 +37,7 @@ Import this repository with **Root Directory `demo`**. The included configuratio
 
 ## Verification and limits
 
-The recorded software baseline is **97 passing offline tests** and a successful production build. Run `npm test` and `npm run build` from `demo/` to verify your checkout. Verified desktop/mobile screenshots and actual synthetic live outputs are linked in the [demo README](demo/README.md).
+The recorded software baseline is **98 passing offline tests** and a successful production build. Run `npm test` and `npm run build` from `demo/` to verify your checkout. Verified desktop/mobile screenshots and actual synthetic live outputs are linked in the [demo README](demo/README.md).
 
 The latest three synthetic detector checks completed after an initial schema rejection, but exposed overflagging and inappropriate uncertainty labels. Exact quotations do not prove correct interpretation. Authored expectations, mocked UI checks, and live model results remain distinct. These proposed categories are not official WIDA codes, diagnoses, or evidence of educational validity, fairness, or real-student performance. The Grades 9–12 task assumption is provisional; middle-school suitability remains unresolved.
 

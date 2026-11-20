@@ -15,19 +15,19 @@ import {
 } from "./provider.js";
 import { cases, evaluationPlan, runEvaluation, createScenario, runScenario } from "./evaluation.js";
 import { LanguageService, targetSchema, contextSchema } from "./language-analysis.js";
-const language = new LanguageService(languageModelAdapter, modelId);
-const controller = new Controller(modelAdapter, dialogues as Dialogue[], {
-  configured,
-  modelId,
-  generationSettings,
-  configurationMessage,
-});
-const evaluations = new Map<string, unknown>();
-let evaluationRunning = false;
+export function createRuntime() {
+  return {
+    language: new LanguageService(languageModelAdapter, modelId),
+    controller: new Controller(modelAdapter, dialogues as Dialogue[], {configured,modelId,generationSettings,configurationMessage}),
+    evaluations: new Map<string, unknown>(),
+    evaluationRunning: false,
+  };
+}
+const localRuntime = createRuntime();
 // Vercel supplies a parsed body; the local HTTP server supplies a stream.
-async function readBody(req: IncomingMessage & { body?: unknown }) {
+export async function readBody(req: IncomingMessage & { body?: unknown }, limit = 50000) {
   if (req.body !== undefined) {
-    if (Buffer.byteLength(JSON.stringify(req.body)) > 50000) throw new DemoError("Request too large.", 413);
+    if (Buffer.byteLength(JSON.stringify(req.body)) > limit) throw new DemoError("Request too large.", 413);
     return req.body;
   }
   const chunks: Buffer[] = [];
@@ -35,13 +35,13 @@ async function readBody(req: IncomingMessage & { body?: unknown }) {
   for await (const chunk of req) {
     const bytes = Buffer.from(chunk);
     length += bytes.length;
-    if (length > 50000) throw new DemoError("Request too large.", 413);
+    if (length > limit) throw new DemoError("Request too large.", 413);
     chunks.push(bytes);
   }
   try { return JSON.parse(Buffer.concat(chunks).toString("utf8")); }
   catch { throw new DemoError("Invalid JSON."); }
 }
-function sameOrigin(req: IncomingMessage) {
+export function sameOrigin(req: IncomingMessage) {
   if (!req.headers.origin) return true;
   try {
     const origin = new URL(req.headers.origin);
@@ -49,7 +49,8 @@ function sameOrigin(req: IncomingMessage) {
   } catch { return false; }
 }
 
-export async function handleAPI(req: IncomingMessage & { body?: unknown }, res: ServerResponse, hosted = false) {
+export async function handleAPI(req: IncomingMessage & { body?: unknown }, res: ServerResponse, hosted = false, runtime = localRuntime) {
+  const {controller, language, evaluations} = runtime;
   const send = (data: unknown, status = 200) => {
     res.writeHead(status, {
       "Content-Type": "application/json",
@@ -73,7 +74,7 @@ export async function handleAPI(req: IncomingMessage & { body?: unknown }, res: 
           dialogues,
           cases,
           hosted,
-          sessionNotice: hosted ? "Temporary hosted session. Export before leaving; a server restart or another instance can end this session." : null,
+          sessionNotice: hosted ? "Temporary demo: encrypted session state stays in this browser tab. Export before closing; sessions expire after 12 hours or a redeployment." : null,
         });
       if (req.method === "GET" && url.pathname === "/api/export") {
         const session = controller.get(url.searchParams.get("sessionId") ?? "");
@@ -166,9 +167,9 @@ export async function handleAPI(req: IncomingMessage & { body?: unknown }, res: 
           .parse(body);
         if (!configured)
           throw new DemoError(configurationMessage ?? "Live model not configured.", 503);
-        if (evaluationRunning)
+        if (runtime.evaluationRunning)
           throw new DemoError("Another comparison is running.", 409);
-        evaluationRunning = true;
+        runtime.evaluationRunning = true;
         const runId = crypto.randomUUID();
         const record = {
           id: runId,
@@ -193,7 +194,7 @@ export async function handleAPI(req: IncomingMessage & { body?: unknown }, res: 
             record.status = "error";
           })
           .finally(() => {
-            evaluationRunning = false;
+            runtime.evaluationRunning = false;
           });
         return send(record, 202);
       }

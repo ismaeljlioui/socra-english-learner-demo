@@ -11,18 +11,18 @@ try {
   const response = await fetch(`${base}/api?route=config`);
   assert.equal(response.status, 200);
   assert.equal((await response.json()).hosted, true);
-  const created = await fetch(`${base}/api?route=sessions`, {
+  const created = await fetch(`${base}/api?route=transport`, {
     method: "POST", headers: { "Content-Type": "application/json", Origin: base },
-    body: JSON.stringify({ mode: "fixture", condition: "policy", fixtureId: "D1" }),
+    body: JSON.stringify({path:"/api/sessions",body:{ mode: "fixture", condition: "policy", fixtureId: "D1" }}),
   });
   assert.equal(created.status, 201);
   const session = await created.json();
-  const next = await fetch(`${base}/api/action`, {
+  const next = await fetch(`${base}/api/transport`, {
     method: "POST", headers: { "Content-Type": "application/json", Origin: base },
-    body: JSON.stringify({ sessionId: session.id, operation: "advance", requestId: "native-check" }),
+    body: JSON.stringify({path:"/api/action",state:session.state,body:{ sessionId: session.data.id, operation: "advance", requestId: "native-check" }}),
   });
   assert.equal(next.status, 200);
-  assert.equal((await next.json()).fixtureIndex, 1);
+  assert.equal((await next.json()).data.fixtureIndex, 1);
   console.log("Native Node runtime: config, scripted session and response passed. No AI calls.");
 } finally {
   server.closeAllConnections();
